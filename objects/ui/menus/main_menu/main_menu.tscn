@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://c0f5rw8q2r1lu"]
+
+[ext_resource type="Script" uid="uid://cbg0w5dgiehmw" path="res://objects/ui/menus/main_menu/main_menu.gd" id="1_g8kgj"]
+[ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="2_m41jd"]
+[ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="3_rchgy"]
+[ext_resource type="PackedScene" uid="uid://b65bbbeexcs2m" path="res://objects/ui/menus/settings_menu/settings_menu.tscn" id="4_4ae8r"]
+
+[node name="MainMenu" type="Control" unique_id=67057453 node_paths=PackedStringArray("play_button", "settings_button", "exit_button", "settings_menu")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g8kgj")
+play_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/PlayButton")
+settings_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/SettingsButton")
+exit_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/ExitButton")
+settings_menu = NodePath("SettingsMenu")
+
+[node name="Panel" type="Panel" parent="." unique_id=650237544]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1176404918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1798259325]
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1201672581]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="MarginContainer/HBoxContainer/ButtonContainer" unique_id=982456832]
+layout_mode = 2
+offset_transform_enabled = true
+text = "Play"
+
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/HBoxContainer/ButtonContainer/PlayButton" unique_id=1037332586]
+script = ExtResource("2_m41jd")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/ButtonContainer" unique_id=263670111]
+layout_mode = 2
+offset_transform_enabled = true
+text = "Settings"
+
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/HBoxContainer/ButtonContainer/SettingsButton" unique_id=347845216]
+script = ExtResource("2_m41jd")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/ButtonContainer" unique_id=247184181]
+layout_mode = 2
+offset_transform_enabled = true
+text = "Exit"
+
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/HBoxContainer/ButtonContainer/ExitButton" unique_id=545462907]
+script = ExtResource("2_m41jd")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
+[node name="TitleContainer" type="Control" parent="MarginContainer/HBoxContainer" unique_id=144552975]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.36
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/TitleContainer" unique_id=271068372]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -137.5
+offset_right = 124.5
+offset_bottom = 77.0
+grow_horizontal = 2
+texture = ExtResource("3_rchgy")
+expand_mode = 1
+
+[node name="SettingsMenu" parent="." unique_id=194135482 instance=ExtResource("4_4ae8r")]
+visible = false
+layout_mode = 1
