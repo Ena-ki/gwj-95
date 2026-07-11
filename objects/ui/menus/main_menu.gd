@@ -1,0 +1,26 @@
+extends Control
+# Main menu script that controls entire main menu. 
+# Settings menu is implemented through its own script though
+
+
+@export var play_button : Button
+@export var settings_button : Button
+@export var exit_button : Button
+
+
+func _ready() -> void:
+  play_button.pressed.connect(_on_play_button_pressed)
+  settings_button.pressed.connect(_on_settings_button_pressed)
+  exit_button.pressed.connect(_on_exit_button_pressed)
+
+
+func _on_play_button_pressed() -> void:
+  pass
+
+
+func _on_settings_button_pressed() -> void:
+  pass
+
+
+func _on_exit_button_pressed() -> void:
+  get_tree().quit()
