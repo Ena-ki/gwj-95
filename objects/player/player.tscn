@@ -6,12 +6,14 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_cqmt1"]
 radius = 19.026299
 
-[node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals")]
+[node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals", "coyote_timer", "jump_buffer_timer")]
 script = ExtResource("1_cqmt1")
 speed = 150.0
 jump_time_to_peak = 0.5
 jump_time_to_fall = 0.34
 visuals = NodePath("Visuals")
+coyote_timer = NodePath("CoyoteTimer")
+jump_buffer_timer = NodePath("JumpBufferTimer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953772264]
 shape = SubResource("CircleShape2D_cqmt1")
@@ -21,3 +23,11 @@ shape = SubResource("CircleShape2D_cqmt1")
 [node name="PlayerPlaceholder" type="Sprite2D" parent="Visuals" unique_id=1801857521]
 scale = Vector2(0.04891304, 0.04891304)
 texture = ExtResource("2_g7ett")
+
+[node name="CoyoteTimer" type="Timer" parent="." unique_id=462691925]
+wait_time = 0.15
+one_shot = true
+
+[node name="JumpBufferTimer" type="Timer" parent="." unique_id=1745102359]
+wait_time = 0.2
+one_shot = true
