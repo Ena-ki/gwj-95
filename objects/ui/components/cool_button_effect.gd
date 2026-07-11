@@ -1,5 +1,9 @@
 class_name CoolButtonEffect
 extends Node
+# Basic button effect implemented as a component
+# Works by putting it as a child of a button
+# Yes I used magic numbers, yes I used onready, yes it's ugly
+
 
 var one_tween : Tween
 var loop_tween : Tween

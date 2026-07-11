@@ -6,6 +6,7 @@ extends Control
 @export var play_button : Button
 @export var settings_button : Button
 @export var exit_button : Button
+@export var settings_menu : Control
 
 
 func _ready() -> void:
@@ -19,7 +20,7 @@ func _on_play_button_pressed() -> void:
 
 
 func _on_settings_button_pressed() -> void:
-  pass
+  settings_menu.visible = true
 
 
 func _on_exit_button_pressed() -> void:
