@@ -29,6 +29,10 @@ func _physics_process(delta: float) -> void:
   move_and_slide()
 
 
+func _process(_delta: float) -> void:
+  _visual_flip()
+
+
 func _handle_jump() -> void:
   if is_on_floor():
     if _was_on_floor == false:
@@ -54,10 +58,6 @@ func _jump() -> void:
     coyote_timer.stop()
   if jump_buffer_timer.time_left > 0.0:
     jump_buffer_timer.stop()
-
-
-func _process(_delta: float) -> void:
-  _visual_flip()
 
 
 func _visual_flip() -> void:
