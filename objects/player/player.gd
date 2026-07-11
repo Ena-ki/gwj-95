@@ -8,6 +8,9 @@ extends CharacterBody2D
 @export var jump_time_to_peak : float = 1.0
 @export var jump_time_to_fall : float = 1.0
 
+@export_category("Node References")
+@export var visuals : Node2D
+
 @onready var jump_velocity : float = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
 @onready var jump_gravity  : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 @onready var fall_gravity  : float = ((-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)) * -1.0
@@ -15,11 +18,22 @@ extends CharacterBody2D
 
 func _physics_process(delta: float) -> void:
   velocity.x = Input.get_axis("left", "right") * speed
-  if Input.is_action_just_pressed("jump"):
+  if Input.is_action_just_pressed("jump") && is_on_floor():
     velocity.y += jump_velocity
   velocity.y += _get_gravity() * delta
 
   move_and_slide()
+
+
+func _process(_delta: float) -> void:
+  _visual_flip()
+
+
+func _visual_flip() -> void:
+  if velocity.x < 0.0:
+    visuals.scale.x = -1.0
+  elif velocity.x > 0.0:
+    visuals.scale.x = 1.0
 
 
 func _get_gravity() -> float:
