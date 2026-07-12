@@ -1,101 +1,13 @@
-[gd_scene format=3 uid="uid://hhvesa456fp1"]
+[gd_scene format=4 uid="uid://hhvesa456fp1"]
 
-[ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="1_gpfbd"]
+[ext_resource type="TileSet" uid="uid://crja43eqt1kdv" path="res://objects/levels/tilesets/test_set.tres" id="1_dbvfk"]
 [ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="2_ljj53"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikass"]
-size = Vector2(324, 20)
 
 [node name="TestLevel" type="Node2D" unique_id=1614161057]
 
-[node name="TestBlock" type="StaticBody2D" parent="." unique_id=1280011648]
-position = Vector2(159, 339)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBlock" unique_id=1658677833]
-shape = SubResource("RectangleShape2D_ikass")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestBlock" unique_id=1474678968]
-scale = Vector2(2.515625, 0.171875)
-texture = ExtResource("1_gpfbd")
-metadata/_edit_lock_ = true
-
-[node name="TestBlock6" type="StaticBody2D" parent="." unique_id=631248360]
-position = Vector2(-168, 337)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBlock6" unique_id=1832941673]
-shape = SubResource("RectangleShape2D_ikass")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestBlock6" unique_id=897883293]
-scale = Vector2(2.515625, 0.171875)
-texture = ExtResource("1_gpfbd")
-metadata/_edit_lock_ = true
-
-[node name="TestBlock2" type="StaticBody2D" parent="." unique_id=852018818]
-position = Vector2(480, 336)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBlock2" unique_id=591901093]
-shape = SubResource("RectangleShape2D_ikass")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestBlock2" unique_id=1905109858]
-scale = Vector2(2.515625, 0.171875)
-texture = ExtResource("1_gpfbd")
-metadata/_edit_lock_ = true
-
-[node name="TestBlock3" type="StaticBody2D" parent="." unique_id=121973868]
-position = Vector2(463, 227.00002)
-rotation = -0.5181366
-scale = Vector2(0.6125889, 0.5591798)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBlock3" unique_id=106600105]
-shape = SubResource("RectangleShape2D_ikass")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestBlock3" unique_id=287552555]
-scale = Vector2(2.515625, 0.171875)
-texture = ExtResource("1_gpfbd")
-metadata/_edit_lock_ = true
-
-[node name="TestBlock4" type="StaticBody2D" parent="." unique_id=1728175967]
-position = Vector2(107.00001, 255)
-scale = Vector2(0.5476887, 0.8086718)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBlock4" unique_id=1278081406]
-shape = SubResource("RectangleShape2D_ikass")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestBlock4" unique_id=1797817567]
-scale = Vector2(2.515625, 0.171875)
-texture = ExtResource("1_gpfbd")
-metadata/_edit_lock_ = true
-
-[node name="TestBlock7" type="StaticBody2D" parent="." unique_id=1456666206]
-position = Vector2(-117, 212)
-scale = Vector2(0.5476887, 0.8086718)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBlock7" unique_id=235047920]
-shape = SubResource("RectangleShape2D_ikass")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestBlock7" unique_id=591054531]
-scale = Vector2(2.515625, 0.171875)
-texture = ExtResource("1_gpfbd")
-metadata/_edit_lock_ = true
-
-[node name="TestBlock5" type="StaticBody2D" parent="." unique_id=2029686406]
-position = Vector2(272, 181)
-scale = Vector2(0.5476887, 0.8086718)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBlock5" unique_id=634013498]
-shape = SubResource("RectangleShape2D_ikass")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="TestBlock5" unique_id=1205390621]
-scale = Vector2(2.515625, 0.171875)
-texture = ExtResource("1_gpfbd")
-metadata/_edit_lock_ = true
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2059227493]
+tile_map_data = PackedByteArray("AAATAAsAAAADAAMAAAASAAsAAAACAAMAAAARAAsAAAACAAMAAAAQAAsAAAACAAMAAAAPAAsAAAACAAMAAAAOAAsAAAACAAMAAAANAAsAAAACAAMAAAAMAAsAAAACAAMAAAALAAsAAAACAAMAAAAKAAsAAAACAAMAAAAJAAsAAAACAAMAAAAIAAsAAAACAAMAAAAHAAsAAAACAAMAAAAGAAsAAAACAAMAAAAFAAsAAAACAAMAAAAEAAsAAAACAAMAAAADAAsAAAACAAMAAAACAAsAAAACAAMAAAABAAsAAAACAAMAAAAAAAsAAAACAAMAAAABAAkAAAADAAIAAAAAAAkAAAABAAMAAAABAAgAAAAAAAAAAAADAAgAAAABAAMAAAAEAAgAAAADAAMAAAD//wsAAAACAAMAAAD+/wsAAAACAAMAAAD9/wsAAAABAAMAAAD+/wgAAAADAAMAAAD9/wgAAAABAAMAAAAHAAYAAAABAAMAAAAIAAYAAAADAAMAAAAKAAkAAAABAAMAAAALAAkAAAADAAMAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAEAAAAOAAcAAAABAAIAAAAPAAcAAAADAAAAAAAPAAgAAAAAAAEAAAAPAAkAAAAAAAIAAAAMAAQAAAADAAMAAAALAAQAAAACAAMAAAAKAAQAAAACAAMAAAAJAAQAAAACAAMAAAAIAAQAAAABAAMAAAA=")
+tile_set = ExtResource("1_dbvfk")
 
 [node name="Player" parent="." unique_id=51254875 instance=ExtResource("2_ljj53")]
 position = Vector2(238, 257)
