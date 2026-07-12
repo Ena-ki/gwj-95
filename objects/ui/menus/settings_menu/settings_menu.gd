@@ -14,16 +14,16 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
   if event.is_action_pressed("ui_cancel"):
-	visible = false
+    visible = false
 
 
 func _on_visibility_changed() -> void:
   if is_visible_in_tree():
-	set_process_input(true)
-	set_process_unhandled_input(true)
+    set_process_input(true)
+    set_process_unhandled_input(true)
   else:
-	set_process_input(false)
-	set_process_unhandled_input(false)
+    set_process_input(false)
+    set_process_unhandled_input(false)
 
 
 func _on_back_button_pressed():
@@ -32,6 +32,8 @@ func _on_back_button_pressed():
 
 func _on_fullscreen_button_toggled(toggled_on : bool) -> void:
   if toggled_on:
-	DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN)
+    DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN)
   else:
-	DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_WINDOWED)
+    DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_WINDOWED)
+
+
