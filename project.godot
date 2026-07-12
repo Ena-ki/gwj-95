@@ -11,14 +11,20 @@ config_version=5
 [application]
 
 config/name="GWJ 95"
-run/main_scene="uid://hhvesa456fp1"
+run/main_scene="uid://c0f5rw8q2r1lu"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/icon.svg"
+
+[autoload]
+
+SceneLoader="*uid://jb4bi2je2jso"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/window_width_override=960
+window/size/window_height_override=540
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

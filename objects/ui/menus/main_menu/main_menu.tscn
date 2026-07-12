@@ -14,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g8kgj")
 game_scene = "uid://hhvesa456fp1"
+transition_scene = "uid://bgf2gwquqft14"
 play_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/PlayButton")
 settings_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/SettingsButton")
 exit_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/ExitButton")

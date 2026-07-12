@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bgf2gwquqft14"]
+
+[ext_resource type="Script" uid="uid://c8ne1kr1gy2ry" path="res://objects/scene_transitions/fade_transition/fade_transition.gd" id="1_8teq2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8teq2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 0.92333335, 0.8, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Animation" id="Animation_owxjr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.92333335, 0.8, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j4wvs"]
+resource_name = "start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.92333335, 0.8, 0), Color(1, 0.92333335, 0.8, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8teq2"]
+resource_name = "start_back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:theme_override_styles/panel:bg_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.92333335, 0.8, 1), Color(1, 0.92333335, 0.8, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qe85n"]
+_data = {
+&"RESET": SubResource("Animation_owxjr"),
+&"start": SubResource("Animation_j4wvs"),
+&"start_back": SubResource("Animation_8teq2")
+}
+
+[node name="FadeTransition" type="CanvasLayer" unique_id=2045458691 node_paths=PackedStringArray("animation_player")]
+layer = 10
+script = ExtResource("1_8teq2")
+animation_player = NodePath("AnimationPlayer")
+metadata/_custom_type_script = "uid://fib3qye36xxv"
+
+[node name="Panel" type="Panel" parent="." unique_id=1013155382]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8teq2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=437882947]
+libraries/ = SubResource("AnimationLibrary_qe85n")

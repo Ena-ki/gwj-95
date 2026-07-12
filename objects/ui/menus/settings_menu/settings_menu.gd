@@ -31,7 +31,6 @@ func _on_back_button_pressed():
 
 
 func _on_fullscreen_button_toggled(toggled_on : bool) -> void:
-  print("wha")
   if toggled_on:
 	DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN)
   else:
