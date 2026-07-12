@@ -5,9 +5,21 @@ extends CharacterBody2D
 
 @export_category("Movement Variables")
 @export var speed : float = 10.0
-@export var jump_height : float = 100.0
-@export var jump_time_to_peak : float = 1.0
-@export var jump_time_to_fall : float = 1.0
+@export var jump_height : float = 100.0:
+  set(val):
+    jump_height = val
+    jump_velocity = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
+    jump_gravity = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
+    fall_gravity = ((-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)) * -1.0
+@export var jump_time_to_peak : float = 1.0:
+  set(val):
+    jump_time_to_peak = val
+    jump_velocity = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
+    jump_gravity = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
+@export var jump_time_to_fall : float = 1.0:
+  set(val):
+    jump_time_to_fall = val
+    fall_gravity = ((-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)) * -1.0
 
 @export_category("Node References")
 @export var visuals : Node2D
