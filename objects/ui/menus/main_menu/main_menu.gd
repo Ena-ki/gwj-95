@@ -3,6 +3,7 @@ extends Control
 # Settings menu is implemented through its own script though
 
 @export_file("*.tscn") var game_scene
+@export_file("*.tscn") var transition_scene
 
 @export var play_button : Button
 @export var settings_button : Button
@@ -17,7 +18,7 @@ func _ready() -> void:
 
 
 func _on_play_button_pressed() -> void:
-  get_tree().change_scene_to_file(game_scene)
+  SceneLoader.change_scene(game_scene, transition_scene, true)
 
 
 func _on_settings_button_pressed() -> void:
