@@ -17,10 +17,10 @@ func _ready() -> void:
 
 func _on_button_mouse_entered():
   if one_tween:
-    one_tween.kill()
+	one_tween.kill()
   one_tween = create_tween()
   if loop_tween:
-    loop_tween.kill()
+	loop_tween.kill()
   loop_tween = create_tween().set_loops()
   loop_tween.tween_property(button, "offset_transform_rotation",  0.087, 0.2).set_trans(Tween.TRANS_SINE)
   loop_tween.tween_property(button, "offset_transform_rotation", -0.087, 0.2).set_trans(Tween.TRANS_SINE)
@@ -30,7 +30,7 @@ func _on_button_mouse_entered():
 
 func _on_button_mouse_exited():
   if one_tween:
-    one_tween.kill()
+	one_tween.kill()
   one_tween = create_tween()
   loop_tween.kill()
   one_tween.tween_property(button, "offset_transform_scale:x", 1.0, 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
