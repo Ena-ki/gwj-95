@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dxycr0tbfpdwp"]
+
+[ext_resource type="Script" uid="uid://cdve0me44sram" path="res://objects/levels/interactables/interactable_test.gd" id="1_ru4sf"]
+[ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="2_t68ji"]
+[ext_resource type="Script" uid="uid://blv627b6qdysj" path="res://objects/components/InteractableComponent.gd" id="3_oc1oy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_al34r"]
+radius = 165.00304
+
+[node name="interactable_test" type="Node2D" unique_id=479544987]
+script = ExtResource("1_ru4sf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=671479080]
+texture = ExtResource("2_t68ji")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=761707538]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1914814801]
+shape = SubResource("CircleShape2D_al34r")
+
+[node name="InteractableComponent" type="Node" parent="." unique_id=884766864 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("3_oc1oy")
+area_2d = NodePath("../Area2D")
+metadata/_custom_type_script = "uid://blv627b6qdysj"
+
+[connection signal="in_range" from="InteractableComponent" to="." method="_on_interactable_component_in_range"]
+[connection signal="interact" from="InteractableComponent" to="." method="_on_interactable_component_interact"]
+[connection signal="out_of_range" from="InteractableComponent" to="." method="_on_interactable_component_out_of_range"]
