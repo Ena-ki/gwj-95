@@ -11,5 +11,16 @@ tile_set = ExtResource("1_dbvfk")
 
 [node name="Player" parent="." unique_id=51254875 instance=ExtResource("2_ljj53")]
 position = Vector2(238, 257)
+speed = 200.0
+jump_time_to_peak = 0.3
+jump_time_to_fall = 0.2
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=77251732]
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
