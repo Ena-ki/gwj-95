@@ -35,5 +35,3 @@ func _on_fullscreen_button_toggled(toggled_on : bool) -> void:
     DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN)
   else:
     DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_WINDOWED)
-
-
