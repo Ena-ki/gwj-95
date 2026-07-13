@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmx8vjs2bnqfc" path="res://objects/player/player.gd" id="1_cqmt1"]
 [ext_resource type="Texture2D" uid="uid://clyyo0r3hwr7i" path="res://objects/player/player_placeholder.jpg" id="2_g7ett"]
+[ext_resource type="Script" uid="uid://b285v346gxtun" path="res://objects/components/AbilityHandlerComponent.gd" id="3_ssrue"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljj53"]
 size = Vector2(28, 28)
@@ -31,3 +32,7 @@ one_shot = true
 [node name="JumpBufferTimer" type="Timer" parent="." unique_id=1745102359]
 wait_time = 0.2
 one_shot = true
+
+[node name="AbilityHandlerComponent" type="Node" parent="." unique_id=162771768]
+script = ExtResource("3_ssrue")
+metadata/_custom_type_script = "uid://b285v346gxtun"
