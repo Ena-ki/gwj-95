@@ -13,16 +13,13 @@ script = ExtResource("1_ru4sf")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=671479080]
 texture = ExtResource("2_t68ji")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=761707538]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1914814801]
-shape = SubResource("CircleShape2D_al34r")
-
-[node name="InteractableComponent" type="Node" parent="." unique_id=884766864 node_paths=PackedStringArray("area_2d")]
+[node name="InteractableComponent" type="Area2D" parent="." unique_id=775880489]
 script = ExtResource("3_oc1oy")
-area_2d = NodePath("../Area2D")
 metadata/_custom_type_script = "uid://blv627b6qdysj"
 
-[connection signal="in_range" from="InteractableComponent" to="." method="_on_interactable_component_in_range"]
-[connection signal="interact" from="InteractableComponent" to="." method="_on_interactable_component_interact"]
-[connection signal="out_of_range" from="InteractableComponent" to="." method="_on_interactable_component_out_of_range"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent" unique_id=1914814801]
+shape = SubResource("CircleShape2D_al34r")
+
+[connection signal="entered" from="InteractableComponent" to="." method="_on_interactable_component_entered"]
+[connection signal="exited" from="InteractableComponent" to="." method="_on_interactable_component_exited"]
+[connection signal="interacted" from="InteractableComponent" to="." method="_on_interactable_component_interacted"]
