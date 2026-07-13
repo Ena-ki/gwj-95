@@ -3,6 +3,8 @@
 [ext_resource type="TileSet" uid="uid://crja43eqt1kdv" path="res://objects/levels/tilesets/test_set.tres" id="1_dbvfk"]
 [ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="2_ljj53"]
 [ext_resource type="PackedScene" uid="uid://bbgx583hnstu5" path="res://objects/levels/level_objects/level_exit/small_exit.tscn" id="3_dbvfk"]
+[ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="4_ubr78"]
+[ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="5_cjf7f"]
 
 [node name="TestLevel" type="Node2D" unique_id=1614161057]
 
@@ -31,3 +33,21 @@ position = Vector2(497, 202)
 
 [node name="SmallExit2" parent="." unique_id=1999152599 instance=ExtResource("3_dbvfk")]
 position = Vector2(414, 266)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1469173793]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=794450809]
+material = ExtResource("4_ubr78")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -30.0
+offset_right = 43.0
+offset_bottom = 37.39691
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=268319763]
+position = Vector2(57, 164)
+texture = ExtResource("5_cjf7f")
