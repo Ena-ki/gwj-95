@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://crja43eqt1kdv" path="res://objects/levels/tilesets/test_set.tres" id="1_dbvfk"]
 [ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="2_ljj53"]
+[ext_resource type="PackedScene" uid="uid://bbgx583hnstu5" path="res://objects/levels/level_objects/level_exit/small_exit.tscn" id="3_dbvfk"]
 
 [node name="TestLevel" type="Node2D" unique_id=1614161057]
 
@@ -13,3 +14,9 @@ tile_set = ExtResource("1_dbvfk")
 position = Vector2(238, 257)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=77251732]
+
+[node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("3_dbvfk")]
+position = Vector2(497, 202)
+
+[node name="SmallExit2" parent="." unique_id=1999152599 instance=ExtResource("3_dbvfk")]
+position = Vector2(414, 266)
