@@ -88,7 +88,7 @@ color = Color(0.69069004, 0.69069, 0.69069004, 1)
 [node name="SmallExit" type="Area2D" unique_id=346656883]
 script = ExtResource("1_wrcd2")
 new_scene = "uid://c0f5rw8q2r1lu"
-transition_file = "uid://bgf2gwquqft14"
+transition_file = "uid://cl1ie1240smrh"
 metadata/_custom_type_script = "uid://ck8w73wfftvhc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1339189029]
