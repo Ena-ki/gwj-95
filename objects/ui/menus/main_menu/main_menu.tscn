@@ -115,7 +115,6 @@ visible = false
 layout_mode = 1
 
 [node name="ShaderContainer" type="CanvasLayer" parent="." unique_id=405127130]
-visible = false
 script = ExtResource("5_m41jd")
 metadata/_custom_type_script = "uid://le7kdmft6m0t"
 

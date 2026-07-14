@@ -3,18 +3,6 @@
 [ext_resource type="Script" uid="uid://yyd1fw8lmcpc" path="res://objects/ui/menus/pause_menu/pause_menu.gd" id="1_cy7jg"]
 [ext_resource type="PackedScene" uid="uid://b65bbbeexcs2m" path="res://objects/ui/menus/settings_menu/settings_menu.tscn" id="2_xifte"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3emv"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-bg_color = Color(0.89, 0.89, 0.89, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-
 [node name="PauseMenu" type="Control" unique_id=1417159843 node_paths=PackedStringArray("resume_button", "settings_button", "main_menu_button", "settings_menu")]
 layout_mode = 3
 anchors_preset = 15
@@ -44,7 +32,6 @@ theme_override_constants/margin_bottom = 80
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=1432510907]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_u3emv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer" unique_id=1575052412]
 layout_mode = 2
@@ -72,5 +59,4 @@ size_flags_horizontal = 4
 text = "Main menu"
 
 [node name="SettingsMenu" parent="." unique_id=194135482 instance=ExtResource("2_xifte")]
-visible = false
 layout_mode = 1
