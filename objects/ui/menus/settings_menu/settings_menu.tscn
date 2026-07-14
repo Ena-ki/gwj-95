@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b65bbbeexcs2m"]
 
 [ext_resource type="Script" uid="uid://r2lkypdvqpo7" path="res://objects/ui/menus/settings_menu/settings_menu.gd" id="1_hj8sw"]
+[ext_resource type="Script" uid="uid://c5wxkm3mjf0eb" path="res://objects/ui/menus/settings_menu/settings_items/settings_color_item.gd" id="2_yvqt7"]
+[ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="3_xvolb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvqt7"]
 content_margin_left = 0.0
@@ -90,3 +92,23 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_icons/checked = SubResource("DPITexture_xvolb")
 theme_override_icons/unchecked = SubResource("DPITexture_l3bxj")
+
+[node name="SettingsColorItem" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1435374798 node_paths=PackedStringArray("style_base_button", "style_1_button")]
+layout_mode = 2
+script = ExtResource("2_yvqt7")
+shader = ExtResource("3_xvolb")
+style_base = Array[Color]([Color(0, 0.17719561, 0.19397584, 1), Color(1.2273341e-06, 0.443181, 0.3968455, 1), Color(0.40232146, 0.8440351, 0.70057064, 1), Color(0.43667436, 0.9999998, 0.7980199, 1)])
+style_base_button = NodePath("Button")
+style_1 = Array[Color]([Color(0.03205272, 0, 0.37090588, 1), Color(0.42658022, 0.0019935756, 0.7075091, 1), Color(0.7068874, 0.6461441, 1, 1), Color(0.87253207, 0.7971168, 1, 1)])
+style_1_button = NodePath("Button2")
+metadata/_custom_type_script = "uid://c5wxkm3mjf0eb"
+
+[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem" unique_id=1707051728]
+layout_mode = 2
+text = "base style
+"
+
+[node name="Button2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem" unique_id=722024046]
+layout_mode = 2
+text = "1 style
+"

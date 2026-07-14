@@ -4,6 +4,20 @@
 [ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="2_m41jd"]
 [ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="3_rchgy"]
 [ext_resource type="PackedScene" uid="uid://b65bbbeexcs2m" path="res://objects/ui/menus/settings_menu/settings_menu.tscn" id="4_4ae8r"]
+[ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="5_m41jd"]
+[ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="6_rchgy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rchgy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 0.6310167, 0.98260623, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [node name="MainMenu" type="Control" unique_id=67057453 node_paths=PackedStringArray("play_button", "settings_button", "exit_button", "settings_menu")]
 layout_mode = 3
@@ -27,6 +41,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+theme_override_styles/panel = SubResource("StyleBoxFlat_rchgy")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1176404918]
 layout_mode = 1
@@ -96,3 +113,17 @@ expand_mode = 1
 [node name="SettingsMenu" parent="." unique_id=194135482 instance=ExtResource("4_4ae8r")]
 visible = false
 layout_mode = 1
+
+[node name="ShaderContainer" type="CanvasLayer" parent="." unique_id=405127130]
+visible = false
+script = ExtResource("5_m41jd")
+metadata/_custom_type_script = "uid://le7kdmft6m0t"
+
+[node name="ColorRect" type="ColorRect" parent="ShaderContainer" unique_id=839679440]
+material = ExtResource("6_rchgy")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

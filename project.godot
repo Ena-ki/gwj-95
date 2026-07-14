@@ -41,6 +41,10 @@ folder_colors={
 "res://objects/ui/": "green"
 }
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 jump={
