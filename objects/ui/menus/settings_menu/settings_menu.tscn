@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://r2lkypdvqpo7" path="res://objects/ui/menus/settings_menu/settings_menu.gd" id="1_hj8sw"]
 [ext_resource type="Script" uid="uid://c5wxkm3mjf0eb" path="res://objects/ui/menus/settings_menu/settings_items/settings_color_item.gd" id="2_yvqt7"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="3_xvolb"]
+[ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="4_l3bxj"]
 
 [node name="SettingsMenu" type="Control" unique_id=194135482 node_paths=PackedStringArray("back_button", "fullscreen_button")]
 layout_mode = 3
@@ -47,6 +48,10 @@ layout_mode = 2
 size_flags_horizontal = 0
 text = "back"
 
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton" unique_id=663347526]
+script = ExtResource("4_l3bxj")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
 [node name="FullscreenItem" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1585949073]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
@@ -59,6 +64,10 @@ vertical_alignment = 1
 
 [node name="CheckBox" type="CheckBox" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/FullscreenItem" unique_id=1028661726]
 layout_mode = 2
+
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/FullscreenItem/CheckBox" unique_id=807431292]
+script = ExtResource("4_l3bxj")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
 [node name="SettingsColorItem" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1435374798 node_paths=PackedStringArray("style_base_button", "style_1_button")]
 layout_mode = 2
@@ -75,7 +84,15 @@ layout_mode = 2
 text = "base style
 "
 
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem/Button" unique_id=455774666]
+script = ExtResource("4_l3bxj")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
 [node name="Button2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem" unique_id=722024046]
 layout_mode = 2
 text = "1 style
 "
+
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem/Button2" unique_id=241057159]
+script = ExtResource("4_l3bxj")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"

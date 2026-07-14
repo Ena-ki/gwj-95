@@ -8,9 +8,11 @@ extends Node
 var one_tween : Tween
 var loop_tween : Tween
 
-@onready var button : Button = get_parent()
+@onready var button : BaseButton = get_parent()
 
 func _ready() -> void:
+  if button.offset_transform_enabled == false:
+    button.offset_transform_enabled = true
   button.mouse_entered.connect(_on_button_mouse_entered)
   button.mouse_exited.connect(_on_button_mouse_exited)
 
@@ -19,20 +21,13 @@ func _on_button_mouse_entered():
   if one_tween:
     one_tween.kill()
   one_tween = create_tween()
-  if loop_tween:
-    loop_tween.kill()
-  loop_tween = create_tween().set_loops()
-  loop_tween.tween_property(button, "offset_transform_rotation",  0.087, 0.2).set_trans(Tween.TRANS_SINE)
-  loop_tween.tween_property(button, "offset_transform_rotation", -0.087, 0.2).set_trans(Tween.TRANS_SINE)
-  one_tween.tween_property(button, "offset_transform_scale:x", 1.1, 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-  one_tween.parallel().tween_property(button, "offset_transform_scale:y", 1.1, 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+  one_tween.tween_property(button, "offset_transform_scale:x", 1.1, 0.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+  one_tween.parallel().tween_property(button, "offset_transform_scale:y", 1.1, 0.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
 
 
 func _on_button_mouse_exited():
   if one_tween:
     one_tween.kill()
   one_tween = create_tween()
-  loop_tween.kill()
-  one_tween.tween_property(button, "offset_transform_scale:x", 1.0, 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-  one_tween.parallel().tween_property(button, "offset_transform_scale:y", 1.0, 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
-  one_tween.parallel().tween_property(button, "offset_transform_rotation", 0.0, 0.1).set_trans(Tween.TRANS_SINE)
+  one_tween.tween_property(button, "offset_transform_scale:x", 1.0, 0.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+  one_tween.parallel().tween_property(button, "offset_transform_scale:y", 1.0, 0.1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)

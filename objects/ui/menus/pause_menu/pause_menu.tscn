@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://co0yb5nvrs8i5"]
 
 [ext_resource type="Script" uid="uid://yyd1fw8lmcpc" path="res://objects/ui/menus/pause_menu/pause_menu.gd" id="1_cy7jg"]
+[ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="2_p0sgo"]
 [ext_resource type="PackedScene" uid="uid://b65bbbeexcs2m" path="res://objects/ui/menus/settings_menu/settings_menu.tscn" id="2_xifte"]
 
 [node name="PauseMenu" type="Control" unique_id=1417159843 node_paths=PackedStringArray("resume_button", "settings_button", "main_menu_button", "settings_menu")]
@@ -16,7 +17,7 @@ settings_button = NodePath("MarginContainer/PanelContainer/VBoxContainer/Setting
 main_menu_button = NodePath("MarginContainer/PanelContainer/VBoxContainer/MainMenuButton")
 settings_menu = NodePath("SettingsMenu")
 main_menu_scene = "uid://c0f5rw8q2r1lu"
-transition_scene = "uid://bgf2gwquqft14"
+transition_scene = "uid://cl1ie1240smrh"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1338189888]
 layout_mode = 1
@@ -45,6 +46,10 @@ size_flags_horizontal = 4
 text = "Resume
 "
 
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/VBoxContainer/ResumeButton" unique_id=853581197]
+script = ExtResource("2_p0sgo")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
 [node name="SettingsButton" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=1837597660]
 custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
@@ -52,11 +57,19 @@ size_flags_horizontal = 4
 text = "Settings
 "
 
+[node name="CoolButtonEffect2" type="Node" parent="MarginContainer/PanelContainer/VBoxContainer/SettingsButton" unique_id=1742359568]
+script = ExtResource("2_p0sgo")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
 [node name="MainMenuButton" type="Button" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=656455678]
 custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Main menu"
+
+[node name="CoolButtonEffect3" type="Node" parent="MarginContainer/PanelContainer/VBoxContainer/MainMenuButton" unique_id=502556523]
+script = ExtResource("2_p0sgo")
+metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
 [node name="SettingsMenu" parent="." unique_id=194135482 instance=ExtResource("2_xifte")]
 layout_mode = 1
