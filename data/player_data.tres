@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlayerData" format=3 uid="uid://df6xvlbuhiady"]
+
+[ext_resource type="Script" uid="uid://b16dr70vmaywi" path="res://objects/etc/player_data.gd" id="1_wd03v"]
+
+[resource]
+script = ExtResource("1_wd03v")
+level_progress = 3
+metadata/_custom_type_script = "uid://b16dr70vmaywi"
