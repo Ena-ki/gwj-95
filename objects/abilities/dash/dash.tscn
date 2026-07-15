@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bj6eeoxeeq2ll"]
+
+[ext_resource type="Script" uid="uid://cbpv2qqigy1pa" path="res://objects/abilities/dash/dash.gd" id="1_lxi78"]
+[ext_resource type="PackedScene" uid="uid://i4jle7dog0fu" path="res://objects/abilities/dash/dash_glitch_effect.tscn" id="2_y41hm"]
+
+[node name="Dash" type="Node2D" unique_id=2043558360 node_paths=PackedStringArray("ray", "top_ray", "bot_ray")]
+script = ExtResource("1_lxi78")
+ray = NodePath("RayCast2D")
+top_ray = NodePath("RayCast2D2")
+bot_ray = NodePath("RayCast2D3")
+dash_margin = 12.0
+dash_glitch_effect = ExtResource("2_y41hm")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1318043749]
+visible = false
+target_position = Vector2(50, 0)
+
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=64438381]
+visible = false
+target_position = Vector2(50, 0)
+
+[node name="RayCast2D3" type="RayCast2D" parent="." unique_id=510768949]
+visible = false
+target_position = Vector2(50, 0)

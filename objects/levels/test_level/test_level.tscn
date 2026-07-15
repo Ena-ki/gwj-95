@@ -4,21 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="2_ljj53"]
 [ext_resource type="PackedScene" uid="uid://bbgx583hnstu5" path="res://objects/levels/level_objects/level_exit/small_exit.tscn" id="3_dbvfk"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="4_ubr78"]
-[ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="5_cjf7f"]
 [ext_resource type="PackedScene" uid="uid://co0yb5nvrs8i5" path="res://objects/ui/menus/pause_menu/pause_menu.tscn" id="6_0aflj"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="6_i335i"]
 
 [node name="TestLevel" type="Node2D" unique_id=1614161057]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2059227493]
-tile_map_data = PackedByteArray("AAATAAsAAAADAAMAAAASAAsAAAACAAMAAAARAAsAAAACAAMAAAAQAAsAAAACAAMAAAAPAAsAAAACAAMAAAAOAAsAAAACAAMAAAANAAsAAAACAAMAAAAMAAsAAAACAAMAAAALAAsAAAACAAMAAAAKAAsAAAACAAMAAAAJAAsAAAACAAMAAAAIAAsAAAACAAMAAAAHAAsAAAACAAMAAAAGAAsAAAACAAMAAAAFAAsAAAACAAMAAAAEAAsAAAACAAMAAAADAAsAAAACAAMAAAACAAsAAAACAAMAAAABAAsAAAACAAMAAAAAAAsAAAACAAMAAAABAAkAAAADAAIAAAAAAAkAAAABAAMAAAABAAgAAAAAAAAAAAADAAgAAAABAAMAAAAEAAgAAAADAAMAAAD//wsAAAACAAMAAAD+/wsAAAACAAMAAAD9/wsAAAABAAMAAAD+/wgAAAADAAMAAAD9/wgAAAABAAMAAAAHAAYAAAABAAMAAAAIAAYAAAADAAMAAAAKAAkAAAABAAMAAAALAAkAAAADAAMAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAEAAAAOAAcAAAABAAIAAAAPAAcAAAADAAAAAAAPAAgAAAAAAAEAAAAPAAkAAAAAAAIAAAAMAAQAAAADAAMAAAALAAQAAAACAAMAAAAKAAQAAAACAAMAAAAJAAQAAAACAAMAAAAIAAQAAAABAAMAAAA=")
+tile_map_data = PackedByteArray("AAATAAsAAAADAAMAAAASAAsAAAACAAMAAAARAAsAAAACAAMAAAAQAAsAAAACAAMAAAAPAAsAAAACAAMAAAAOAAsAAAACAAMAAAANAAsAAAACAAMAAAAMAAsAAAACAAMAAAALAAsAAAACAAMAAAAKAAsAAAACAAMAAAAJAAsAAAACAAMAAAAIAAsAAAACAAMAAAAHAAsAAAACAAMAAAAGAAsAAAACAAMAAAAFAAsAAAACAAMAAAAEAAsAAAACAAMAAAADAAsAAAACAAMAAAACAAsAAAACAAMAAAABAAsAAAACAAMAAAAAAAsAAAACAAMAAAD//wsAAAACAAMAAAD+/wsAAAACAAMAAAD9/wsAAAACAAMAAAAOAAYAAAAAAAAAAAAOAAcAAAABAAIAAAAPAAcAAAADAAMAAAD8/wsAAAACAAMAAAD7/wsAAAABAAIAAAD7/woAAAAAAAEAAAD7/wkAAAAAAAEAAAD7/wgAAAAAAAEAAAD7/wcAAAAAAAEAAAD7/wYAAAAAAAEAAAD7/wUAAAAAAAAAAAACAAYAAAAAAAEAAAACAAcAAAAAAAEAAAACAAgAAAAAAAEAAAACAAkAAAAAAAIAAAACAAUAAAAAAAAAAAD9/wkAAAABAAMAAAD+/wkAAAADAAMAAAD//wcAAAABAAMAAAAAAAcAAAADAAMAAAAEAAkAAAAAAAIAAAAEAAgAAAAAAAEAAAAEAAcAAAAAAAEAAAAEAAYAAAAAAAEAAAAEAAUAAAAAAAEAAAAEAAQAAAAAAAAAAAAKAAgAAAADAAMAAAAJAAgAAAABAAMAAAAIAAUAAAADAAMAAAAHAAUAAAABAAMAAAA=")
 tile_set = ExtResource("1_dbvfk")
 
 [node name="Player" parent="." unique_id=51254875 instance=ExtResource("2_ljj53")]
 position = Vector2(238, 257)
-speed = 200.0
-jump_time_to_peak = 0.3
-jump_time_to_fall = 0.2
+speed = 170.0
+jump_time_to_peak = 0.35
+jump_time_to_fall = 0.3
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=77251732]
 position_smoothing_enabled = true
@@ -32,13 +31,6 @@ drag_bottom_margin = 0.1
 
 [node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("3_dbvfk")]
 position = Vector2(497, 202)
-
-[node name="SmallExit2" parent="." unique_id=1999152599 instance=ExtResource("3_dbvfk")]
-position = Vector2(414, 266)
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=268319763]
-position = Vector2(57, 164)
-texture = ExtResource("5_cjf7f")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=909484884]
 

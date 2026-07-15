@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://i4jle7dog0fu"]
+
+[sub_resource type="Gradient" id="Gradient_lxi78"]
+offsets = PackedFloat32Array(0.31666666, 0.45212477)
+
+[node name="CPUParticles2D" type="CPUParticles2D" unique_id=168964067]
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.9
+emission_shape = 1
+emission_sphere_radius = 16.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+scale_amount_min = 7.0
+scale_amount_max = 13.0
+color_initial_ramp = SubResource("Gradient_lxi78")
