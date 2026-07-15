@@ -9,6 +9,7 @@ size = Vector2(28, 28)
 [node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals", "coyote_timer", "jump_buffer_timer")]
 script = ExtResource("1_cqmt1")
 speed = 150.0
+jump_height = null
 jump_time_to_peak = 0.5
 jump_time_to_fall = 0.34
 visuals = NodePath("Visuals")
