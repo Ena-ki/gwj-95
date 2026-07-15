@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bmx8vjs2bnqfc" path="res://objects/player/player.gd" id="1_cqmt1"]
 [ext_resource type="Texture2D" uid="uid://clyyo0r3hwr7i" path="res://objects/player/player_placeholder.jpg" id="2_g7ett"]
 [ext_resource type="PackedScene" uid="uid://bj6eeoxeeq2ll" path="res://objects/abilities/dash/dash.tscn" id="3_ssrue"]
+[ext_resource type="PackedScene" uid="uid://dmvhcgpdyg38p" path="res://objects/abilities/big_jump/big_jump.tscn" id="4_jnjyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljj53"]
 size = Vector2(28, 28)
@@ -36,3 +37,7 @@ one_shot = true
 
 [node name="Dash" parent="." unique_id=2043558360 node_paths=PackedStringArray("dash_target") instance=ExtResource("3_ssrue")]
 dash_target = NodePath("..")
+
+[node name="BigJump" parent="." unique_id=1882994134 node_paths=PackedStringArray("jump_target") instance=ExtResource("4_jnjyq")]
+jump_target = NodePath("..")
+jump_height = 200.0

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dmvhcgpdyg38p"]
+
+[ext_resource type="Script" uid="uid://cbw4vbaehaipi" path="res://objects/abilities/big_jump/big_jump.gd" id="1_m66p7"]
+
+[node name="BigJump" type="Node2D" unique_id=1882994134]
+script = ExtResource("1_m66p7")
