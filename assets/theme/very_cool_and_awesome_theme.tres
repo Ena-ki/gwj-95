@@ -69,6 +69,10 @@ region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_732r1"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6kom"]
+atlas = ExtResource("2_fhats")
+region = Rect2(32, 32, 32, 32)
+
 [resource]
 Button/styles/focus = SubResource("StyleBoxTexture_fhats")
 Button/styles/hover = SubResource("StyleBoxTexture_wvq5h")
@@ -83,5 +87,17 @@ CheckBox/styles/hover = SubResource("StyleBoxEmpty_732r1")
 CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_732r1")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_732r1")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_732r1")
+OptionButton/icons/arrow = SubResource("AtlasTexture_q6kom")
+OptionButton/styles/disabled = ExtResource("1_4i03r")
+OptionButton/styles/disabled_mirrored = ExtResource("1_4i03r")
+OptionButton/styles/focus = ExtResource("1_4i03r")
+OptionButton/styles/hover = ExtResource("1_4i03r")
+OptionButton/styles/hover_mirrored = ExtResource("1_4i03r")
+OptionButton/styles/normal = ExtResource("1_4i03r")
+OptionButton/styles/normal_mirrored = ExtResource("1_4i03r")
+OptionButton/styles/pressed = ExtResource("1_4i03r")
+OptionButton/styles/pressed_mirrored = ExtResource("1_4i03r")
 Panel/styles/panel = ExtResource("1_4i03r")
 PanelContainer/styles/panel = ExtResource("1_4i03r")
+PopupMenu/styles/hover = ExtResource("1_4i03r")
+PopupMenu/styles/panel = ExtResource("1_4i03r")

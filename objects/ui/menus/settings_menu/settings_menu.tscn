@@ -2,10 +2,14 @@
 
 [ext_resource type="Script" uid="uid://r2lkypdvqpo7" path="res://objects/ui/menus/settings_menu/settings_menu.gd" id="1_hj8sw"]
 [ext_resource type="Script" uid="uid://c5wxkm3mjf0eb" path="res://objects/ui/menus/settings_menu/settings_items/settings_color_item.gd" id="2_yvqt7"]
-[ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="3_xvolb"]
+[ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="4_3tf4i"]
 [ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="4_l3bxj"]
+[ext_resource type="Script" uid="uid://dpf30ng785gfw" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_item.gd" id="5_mmxrv"]
+[ext_resource type="Resource" uid="uid://dcef226fv5ses" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/grayscale.tres" id="7_lxv02"]
+[ext_resource type="Resource" uid="uid://biopjckjg16t6" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/silent_green.tres" id="11_6oohq"]
 
 [node name="SettingsMenu" type="Control" unique_id=194135482 node_paths=PackedStringArray("back_button", "fullscreen_button")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,30 +73,9 @@ layout_mode = 2
 script = ExtResource("4_l3bxj")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
-[node name="SettingsColorItem" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1435374798 node_paths=PackedStringArray("style_base_button", "style_1_button")]
+[node name="SettingsColorItem" type="OptionButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=499706028]
 layout_mode = 2
 script = ExtResource("2_yvqt7")
-shader = ExtResource("3_xvolb")
-style_base = Array[Color]([Color(0, 0.17719561, 0.19397584, 1), Color(1.2273341e-06, 0.443181, 0.3968455, 1), Color(0.40232146, 0.8440351, 0.70057064, 1), Color(0.43667436, 0.9999998, 0.7980199, 1)])
-style_base_button = NodePath("Button")
-style_1 = Array[Color]([Color(0.03205272, 0, 0.37090588, 1), Color(0.42658022, 0.0019935756, 0.7075091, 1), Color(0.7068874, 0.6461441, 1, 1), Color(0.87253207, 0.7971168, 1, 1)])
-style_1_button = NodePath("Button2")
+shader = ExtResource("4_3tf4i")
+palettes = Array[ExtResource("5_mmxrv")]([ExtResource("7_lxv02"), ExtResource("11_6oohq")])
 metadata/_custom_type_script = "uid://c5wxkm3mjf0eb"
-
-[node name="Button" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem" unique_id=1707051728]
-layout_mode = 2
-text = "base style
-"
-
-[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem/Button" unique_id=455774666]
-script = ExtResource("4_l3bxj")
-metadata/_custom_type_script = "uid://cl130e5ueeoei"
-
-[node name="Button2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem" unique_id=722024046]
-layout_mode = 2
-text = "1 style
-"
-
-[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/SettingsColorItem/Button2" unique_id=241057159]
-script = ExtResource("4_l3bxj")
-metadata/_custom_type_script = "uid://cl130e5ueeoei"
