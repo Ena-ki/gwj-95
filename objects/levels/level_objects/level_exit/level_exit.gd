@@ -17,7 +17,7 @@ func _on_body_entered(body : Node2D) -> void:
   if body is Player and !_activated:
     _activated = true
     var tween := create_tween()
-    tween.tween_property(Engine, "time_scale", 0.0, 0.4)
+    tween.tween_property(Engine, "time_scale", 0.0, 0.2)
     SceneLoader.change_scene(new_scene, transition_file)
 
 

@@ -2,9 +2,7 @@ extends Control
 # Main menu script that controls entire main menu. 
 # Settings menu is implemented through its own script though
 
-@export_file("*.tscn") var game_scene
-@export_file("*.tscn") var transition_scene
-
+@export var scene_selector : Control
 @export var play_button : Button
 @export var settings_button : Button
 @export var exit_button : Button
@@ -18,7 +16,7 @@ func _ready() -> void:
 
 
 func _on_play_button_pressed() -> void:
-  SceneLoader.change_scene(game_scene, transition_scene, true)
+  scene_selector.visible = true
 
 
 func _on_settings_button_pressed() -> void:

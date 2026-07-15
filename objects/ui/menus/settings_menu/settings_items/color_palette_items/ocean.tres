@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ColorPaletteItem" format=3 uid="uid://ce5b2a6spmr2n"]
+
+[ext_resource type="Script" uid="uid://dpf30ng785gfw" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_item.gd" id="1_uk0p8"]
+
+[resource]
+script = ExtResource("1_uk0p8")
+palette = Array[Color]([Color(0, 0.19636086, 0.090842, 1), Color(0.24599998, 0.45, 0.144, 1), Color(0.6901961, 0.6901961, 0.24705882, 1), Color(0.9490196, 0.9490196, 0.8156863, 1)])
+palette_name = "Silent Green"
+metadata/_custom_type_script = "uid://dpf30ng785gfw"

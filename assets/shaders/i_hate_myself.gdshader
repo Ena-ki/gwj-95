@@ -79,11 +79,18 @@ vec3 get_bloom(sampler2D tex, vec2 uv, vec2 tex_pixel_size) {
   return bloom;
 }
 
-void fragment() {
-  vec2 warped_coords = warp(UV, aspect, curve);
+vec4 like_fragment(vec2 uv, vec2 p_size) {
+  vec2 warped_coords = warp(uv, aspect, curve);
+  if (warped_coords.x < 0.0 || warped_coords.x > 1.0 || warped_coords.y < 0.0 || warped_coords.y > 1.0) {
+    return vec4(color_map[0], 1.0);
+  }
   vec4 col = texture(screen_texture, warped_coords);
   vec3 final_palette_color = quantize_and_map(col.rgb);
-  vec3 bloom = get_bloom(screen_texture, warped_coords, SCREEN_PIXEL_SIZE);
+  vec3 bloom = get_bloom(screen_texture, warped_coords, p_size);
   vec3 final_color = clamp(final_palette_color + (bloom * bloom_intensity), vec3(0.0), vec3(1.0));
-  COLOR = vec4(final_color, 1.0);
+  return vec4(final_color, 1.0);
+}
+
+void fragment() {
+  COLOR = like_fragment(UV, SCREEN_PIXEL_SIZE);
 }

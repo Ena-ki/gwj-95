@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ColorPaletteItem" format=3 uid="uid://coon4vhf12b7d"]
+
+[ext_resource type="Script" uid="uid://dpf30ng785gfw" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_item.gd" id="1_lhkmi"]
+
+[resource]
+script = ExtResource("1_lhkmi")
+palette = Array[Color]([Color(0.3225649, 0, 0.06256822, 1), Color(0.6164916, 0, 0.114591114, 1), Color(0.99999994, 0.4695661, 0.4511603, 1), Color(1, 0.8712383, 0.85308886, 1)])
+palette_name = "Crimson"
+metadata/_custom_type_script = "uid://dpf30ng785gfw"

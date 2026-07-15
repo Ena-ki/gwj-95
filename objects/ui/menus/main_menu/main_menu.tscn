@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cbg0w5dgiehmw" path="res://objects/ui/menus/main_menu/main_menu.gd" id="1_g8kgj"]
 [ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="2_m41jd"]
-[ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="3_rchgy"]
 [ext_resource type="PackedScene" uid="uid://b65bbbeexcs2m" path="res://objects/ui/menus/settings_menu/settings_menu.tscn" id="4_4ae8r"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="5_m41jd"]
+[ext_resource type="PackedScene" uid="uid://chrsyqa2v12ye" path="res://objects/ui/menus/level_selector/level_selector.tscn" id="6_4ae8r"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="6_rchgy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rchgy"]
@@ -19,7 +19,45 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="MainMenu" type="Control" unique_id=67057453 node_paths=PackedStringArray("play_button", "settings_button", "exit_button", "settings_menu")]
+[sub_resource type="Animation" id="Animation_rchgy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="Animation" id="Animation_m41jd"]
+resource_name = "loop"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [10, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rchgy"]
+_data = {
+&"RESET": SubResource("Animation_rchgy"),
+&"loop": SubResource("Animation_m41jd")
+}
+
+[node name="MainMenu" type="Control" unique_id=67057453 node_paths=PackedStringArray("scene_selector", "play_button", "settings_button", "exit_button", "settings_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,8 +65,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g8kgj")
-game_scene = "uid://hhvesa456fp1"
-transition_scene = "uid://bgf2gwquqft14"
+scene_selector = NodePath("LevelSelector")
 play_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/PlayButton")
 settings_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/SettingsButton")
 exit_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/ExitButton")
@@ -98,21 +135,51 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.36
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/TitleContainer" unique_id=271068372]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/TitleContainer" unique_id=1410462038]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -137.5
-offset_right = 124.5
-offset_bottom = 77.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-texture = ExtResource("3_rchgy")
-expand_mode = 1
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 54
+text = "EXIT code_"
+horizontal_alignment = 1
+visible_characters = 10
+visible_characters_behavior = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/HBoxContainer/TitleContainer" unique_id=427420100]
+libraries/ = SubResource("AnimationLibrary_rchgy")
+autoplay = &"loop"
 
 [node name="SettingsMenu" parent="." unique_id=194135482 instance=ExtResource("4_4ae8r")]
 visible = false
+z_index = 3
 layout_mode = 1
+
+[node name="LevelSelector" parent="." unique_id=1740501550 instance=ExtResource("6_4ae8r")]
+visible = false
+z_index = 3
+layout_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="." unique_id=176866299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2" unique_id=1176182497]
+layout_mode = 2
+mouse_filter = 2
+text = "made for godot wild jam 95"
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="ShaderContainer" type="CanvasLayer" parent="." unique_id=405127130]
 visible = false
@@ -127,3 +194,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1296387286]
+z_index = 1
+position = Vector2(373, 186)
+amount = 16
+draw_order = 1
+emission_shape = 1
+emission_sphere_radius = 42.63
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 5.0
+scale_amount_min = 16.79
+scale_amount_max = 29.43
