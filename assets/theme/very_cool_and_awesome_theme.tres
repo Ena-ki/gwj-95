@@ -1,0 +1,103 @@
+[gd_resource type="Theme" format=3 uid="uid://ds7og8ohncbi7"]
+
+[ext_resource type="StyleBox" uid="uid://dvu5pl5402877" path="res://assets/theme/panel.tres" id="1_4i03r"]
+[ext_resource type="Texture2D" uid="uid://dix55a20wmu8d" path="res://assets/theme/ui_atlas.png" id="2_fhats"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxof5"]
+load_path = "res://.godot/imported/ui_atlas.png-168355f8fd37826246c334c786008a64.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i03r"]
+atlas = SubResource("CompressedTexture2D_uxof5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhats"]
+texture = SubResource("AtlasTexture_4i03r")
+texture_margin_left = 8.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_68j5j"]
+load_path = "res://.godot/imported/ui_atlas.png-168355f8fd37826246c334c786008a64.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62yhw"]
+atlas = SubResource("CompressedTexture2D_68j5j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvq5h"]
+texture = SubResource("AtlasTexture_62yhw")
+texture_margin_left = 8.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_10fdm"]
+load_path = "res://.godot/imported/ui_atlas.png-168355f8fd37826246c334c786008a64.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjda3"]
+atlas = SubResource("CompressedTexture2D_10fdm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_60ec6"]
+texture = SubResource("AtlasTexture_hjda3")
+texture_margin_left = 8.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_26udv"]
+load_path = "res://.godot/imported/ui_atlas.png-168355f8fd37826246c334c786008a64.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwo8y"]
+atlas = SubResource("CompressedTexture2D_26udv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8wotk"]
+texture = SubResource("AtlasTexture_hwo8y")
+texture_margin_left = 8.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvolb"]
+atlas = ExtResource("2_fhats")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3bxj"]
+atlas = ExtResource("2_fhats")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_732r1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6kom"]
+atlas = ExtResource("2_fhats")
+region = Rect2(32, 32, 32, 32)
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxTexture_fhats")
+Button/styles/hover = SubResource("StyleBoxTexture_wvq5h")
+Button/styles/normal = SubResource("StyleBoxTexture_60ec6")
+Button/styles/pressed = SubResource("StyleBoxTexture_8wotk")
+CheckBox/icons/checked = SubResource("AtlasTexture_xvolb")
+CheckBox/icons/checked_disabled = SubResource("AtlasTexture_xvolb")
+CheckBox/icons/unchecked = SubResource("AtlasTexture_l3bxj")
+CheckBox/icons/unchecked_disabled = SubResource("AtlasTexture_l3bxj")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_732r1")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_732r1")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_732r1")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_732r1")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_732r1")
+OptionButton/icons/arrow = SubResource("AtlasTexture_q6kom")
+OptionButton/styles/disabled = ExtResource("1_4i03r")
+OptionButton/styles/disabled_mirrored = ExtResource("1_4i03r")
+OptionButton/styles/focus = ExtResource("1_4i03r")
+OptionButton/styles/hover = ExtResource("1_4i03r")
+OptionButton/styles/hover_mirrored = ExtResource("1_4i03r")
+OptionButton/styles/normal = ExtResource("1_4i03r")
+OptionButton/styles/normal_mirrored = ExtResource("1_4i03r")
+OptionButton/styles/pressed = ExtResource("1_4i03r")
+OptionButton/styles/pressed_mirrored = ExtResource("1_4i03r")
+Panel/styles/panel = ExtResource("1_4i03r")
+PanelContainer/styles/panel = ExtResource("1_4i03r")
+PopupMenu/styles/hover = ExtResource("1_4i03r")
+PopupMenu/styles/panel = ExtResource("1_4i03r")

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxycr0tbfpdwp"]
+
+[ext_resource type="Script" uid="uid://cdve0me44sram" path="res://objects/levels/interactables/interactable_test.gd" id="1_ru4sf"]
+[ext_resource type="Texture2D" uid="uid://cgm4y8d77vrcd" path="res://assets/icon.svg" id="2_t68ji"]
+[ext_resource type="Script" uid="uid://blv627b6qdysj" path="res://objects/components/InteractableComponent.gd" id="3_oc1oy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_al34r"]
+radius = 165.00304
+
+[node name="interactable_test" type="Node2D" unique_id=479544987]
+script = ExtResource("1_ru4sf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=671479080]
+texture = ExtResource("2_t68ji")
+
+[node name="InteractableComponent" type="Area2D" parent="." unique_id=775880489]
+script = ExtResource("3_oc1oy")
+metadata/_custom_type_script = "uid://blv627b6qdysj"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent" unique_id=1914814801]
+shape = SubResource("CircleShape2D_al34r")
+
+[connection signal="entered" from="InteractableComponent" to="." method="_on_interactable_component_entered"]
+[connection signal="exited" from="InteractableComponent" to="." method="_on_interactable_component_exited"]
+[connection signal="interacted" from="InteractableComponent" to="." method="_on_interactable_component_interacted"]

@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://bmx8vjs2bnqfc" path="res://objects/player/player.gd" id="1_cqmt1"]
 [ext_resource type="Texture2D" uid="uid://clyyo0r3hwr7i" path="res://objects/player/player_placeholder.jpg" id="2_g7ett"]
+[ext_resource type="PackedScene" uid="uid://bj6eeoxeeq2ll" path="res://objects/abilities/dash/dash.tscn" id="3_ssrue"]
+[ext_resource type="PackedScene" uid="uid://dmvhcgpdyg38p" path="res://objects/abilities/big_jump/big_jump.tscn" id="4_jnjyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljj53"]
 size = Vector2(28, 28)
 
 [node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals", "coyote_timer", "jump_buffer_timer")]
+safe_margin = 0.15
 script = ExtResource("1_cqmt1")
 speed = 150.0
 jump_height = null
@@ -32,3 +35,10 @@ one_shot = true
 [node name="JumpBufferTimer" type="Timer" parent="." unique_id=1745102359]
 wait_time = 0.2
 one_shot = true
+
+[node name="Dash" parent="." unique_id=2043558360 node_paths=PackedStringArray("dash_target") instance=ExtResource("3_ssrue")]
+dash_target = NodePath("..")
+
+[node name="BigJump" parent="." unique_id=1882994134 node_paths=PackedStringArray("jump_target") instance=ExtResource("4_jnjyq")]
+jump_target = NodePath("..")
+jump_height = 200.0

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ColorPaletteItem" format=3 uid="uid://dcef226fv5ses"]
+
+[ext_resource type="Script" uid="uid://dpf30ng785gfw" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_item.gd" id="1_7qutw"]
+
+[resource]
+script = ExtResource("1_7qutw")
+palette = Array[Color]([Color(0.12364847, 0.12364847, 0.12364846, 1), Color(0.2509804, 0.2509804, 0.2509804, 1), Color(0.65, 0.65, 0.65, 1), Color(1, 1, 1, 1)])
+palette_name = "Grayscale"
+metadata/_custom_type_script = "uid://dpf30ng785gfw"
