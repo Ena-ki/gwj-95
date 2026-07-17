@@ -50,7 +50,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-[node name="SmallExit2" parent="." unique_id=1999152599 instance=ExtResource("3_dbvfk")]
-position = Vector2(414, 266)
-[node name="interactable_test" parent="." unique_id=479544987 instance=ExtResource("3_dbvfk")]
-position = Vector2(53, 153)
