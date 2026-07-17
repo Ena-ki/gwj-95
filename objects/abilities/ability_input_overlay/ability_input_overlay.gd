@@ -1,6 +1,7 @@
 class_name AbilityInputOveray
 extends CanvasLayer
 
+@export var camera : Camera2D
 @export var dash : Dash
 @export var big_jump : BigJump
 @export var dash_code_left : String = "AAA"
@@ -12,6 +13,7 @@ extends CanvasLayer
 @export var correct_code_sound : AudioStream
 @export var wrong_code_sound : AudioStream
 
+var camera_tween : Tween
 
 #preventing holding, don't remove
 #idk how this works either
@@ -59,6 +61,10 @@ func _start_editing() -> void:
   line_edit.text = ""
   Engine.time_scale = 0.1
   AudioServer.set_bus_effect_enabled(1, 0, true)
+  if camera_tween:
+    camera_tween.kill()
+  camera_tween = create_tween()
+  camera_tween.tween_property(camera, "zoom", Vector2(1.2, 1.2), 0.2 * Engine.time_scale * 2).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
 
 func _exit_editing() -> void:
@@ -66,3 +72,6 @@ func _exit_editing() -> void:
   AudioServer.set_bus_effect_enabled(1, 0, false)
   line_edit.unedit()
   visible = false
+  camera_tween.kill()
+  camera_tween = create_tween()
+  camera_tween.tween_property(camera, "zoom", Vector2(1.0, 1.0), 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)

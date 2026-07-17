@@ -19,9 +19,9 @@ size = Vector2(24, 24)
 [node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals", "coyote_timer", "jump_buffer_timer")]
 safe_margin = 0.15
 script = ExtResource("1_cqmt1")
-speed = 150.0
-jump_time_to_peak = 0.5
-jump_time_to_fall = 0.34
+speed = 170.0
+jump_time_to_peak = 0.35
+jump_time_to_fall = 0.3
 visuals = NodePath("Visuals")
 coyote_timer = NodePath("CoyoteTimer")
 jump_buffer_timer = NodePath("JumpBufferTimer")
@@ -52,8 +52,13 @@ dash_target = NodePath("..")
 jump_target = NodePath("..")
 jump_height = 200.0
 
-[node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("dash", "big_jump") instance=ExtResource("5_gnkmh")]
+[node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("camera", "dash", "big_jump") instance=ExtResource("5_gnkmh")]
 visible = false
+camera = NodePath("../Camera2D")
 dash = NodePath("../Dash")
 big_jump = NodePath("../BigJump")
 jump_code = "WWW"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1936014071]
+zoom = Vector2(0.8, 0.8)
+position_smoothing_enabled = true

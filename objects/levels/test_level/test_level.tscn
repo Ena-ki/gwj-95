@@ -26,15 +26,6 @@ speed = 170.0
 jump_time_to_peak = 0.35
 jump_time_to_fall = 0.3
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=77251732]
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.1
-drag_top_margin = 0.1
-drag_right_margin = 0.1
-drag_bottom_margin = 0.1
-
 [node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("3_dbvfk")]
 position = Vector2(497, 202)
 

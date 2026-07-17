@@ -9,7 +9,8 @@ extends Node2D
 func _ready() -> void:
   player.died.connect(reset_level)
   reset_level()
-  if AudioLoader.current_music.stream != level_music:
+
+  if !AudioLoader.current_music || AudioLoader.current_music.stream != level_music:
     AudioLoader.play_music(level_music)
   
 
