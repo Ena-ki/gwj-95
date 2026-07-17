@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://bmu1kjbdsyfpe" path="res://objects/player/landing.wav" id="3_ow0dq"]
 [ext_resource type="PackedScene" uid="uid://bj6eeoxeeq2ll" path="res://objects/abilities/dash/dash.tscn" id="3_ssrue"]
 [ext_resource type="PackedScene" uid="uid://dmvhcgpdyg38p" path="res://objects/abilities/big_jump/big_jump.tscn" id="4_jnjyq"]
+[ext_resource type="AudioStream" uid="uid://bltpvo4sq3cwf" path="res://objects/abilities/ability_input_overlay/wrong code.wav" id="4_m4kly"]
 [ext_resource type="PackedScene" uid="uid://dqcx05u1ctqv6" path="res://objects/abilities/ability_input_overlay/ability_input_overlay.tscn" id="5_gnkmh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljj53"]
@@ -22,6 +23,7 @@ coyote_timer = NodePath("CoyoteTimer")
 jump_buffer_timer = NodePath("JumpBufferTimer")
 jump_sound = ExtResource("2_xkryw")
 landing_sound = ExtResource("3_ow0dq")
+death_sound = ExtResource("4_m4kly")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=518828244]
 
