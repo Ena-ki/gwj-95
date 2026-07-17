@@ -13,6 +13,13 @@ extends CanvasLayer
 @export var wrong_code_sound : AudioStream
 
 
+#preventing holding, don't remove
+#idk how this works either
+func _input(event: InputEvent) -> void:
+  if line_edit.has_focus() and event is InputEventKey and event.echo:
+    get_viewport().set_input_as_handled()
+
+
 func _ready() -> void:
   line_edit.text_changed.connect(_on_line_edit_text_changed)
 
