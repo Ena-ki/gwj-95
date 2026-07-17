@@ -2,6 +2,8 @@ extends Node
 # SceneLoader class to make scene transitions easier
 # See SceneTransition for scene transitions
 
+signal scene_changed
+
 var progress : Array = []
 var new_scene_path : String = ""
 var transition : SceneTransition
@@ -45,6 +47,7 @@ func _process(_delta: float) -> void:
       get_tree().change_scene_to_packed(loaded_scene)
       set_process(false)
       transition.start_back()
+      scene_changed.emit()
 
 
 func _on_transition_finished() -> void:

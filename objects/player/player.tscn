@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bmx8vjs2bnqfc" path="res://objects/player/player.gd" id="1_cqmt1"]
 [ext_resource type="Texture2D" uid="uid://clyyo0r3hwr7i" path="res://objects/player/player_placeholder.jpg" id="2_g7ett"]
+[ext_resource type="AudioStream" uid="uid://5sa7mn7rdmap" path="res://objects/player/jumping.wav" id="2_xkryw"]
+[ext_resource type="AudioStream" uid="uid://bmu1kjbdsyfpe" path="res://objects/player/landing.wav" id="3_ow0dq"]
 [ext_resource type="PackedScene" uid="uid://bj6eeoxeeq2ll" path="res://objects/abilities/dash/dash.tscn" id="3_ssrue"]
 [ext_resource type="PackedScene" uid="uid://dmvhcgpdyg38p" path="res://objects/abilities/big_jump/big_jump.tscn" id="4_jnjyq"]
 [ext_resource type="PackedScene" uid="uid://dqcx05u1ctqv6" path="res://objects/abilities/ability_input_overlay/ability_input_overlay.tscn" id="5_gnkmh"]
@@ -18,6 +20,8 @@ jump_time_to_fall = 0.34
 visuals = NodePath("Visuals")
 coyote_timer = NodePath("CoyoteTimer")
 jump_buffer_timer = NodePath("JumpBufferTimer")
+jump_sound = ExtResource("2_xkryw")
+landing_sound = ExtResource("3_ow0dq")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=518828244]
 

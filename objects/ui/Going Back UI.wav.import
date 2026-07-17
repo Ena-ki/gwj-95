@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by6nb18ngfcnk"
+path="res://.godot/imported/Going Back UI.wav-0235a158fdd8ce810c046bf38ee6321b.sample"
+
+[deps]
+
+source_file="res://objects/ui/Going Back UI.wav"
+dest_files=["res://.godot/imported/Going Back UI.wav-0235a158fdd8ce810c046bf38ee6321b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
