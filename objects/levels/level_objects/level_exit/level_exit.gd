@@ -10,16 +10,16 @@ var _activated : bool = false
 
 
 func _ready() -> void:
-  body_entered.connect(_on_body_entered)
+	body_entered.connect(_on_body_entered)
 
 
 func _on_body_entered(body : Node2D) -> void:
-  if body is Player and !_activated:
-    _activated = true
-    var tween := create_tween()
-    tween.tween_property(Engine, "time_scale", 0.0, 0.2)
-    SceneLoader.change_scene(new_scene, transition_file)
+	if body is Player and !_activated:
+		_activated = true
+		var tween := create_tween()
+		tween.tween_property(Engine, "time_scale", 0.0, 0.2)
+		SceneLoader.change_scene(new_scene, transition_file)
 
 
 func _exit_tree() -> void:
-  Engine.time_scale = 1.0
+	Engine.time_scale = 1.0

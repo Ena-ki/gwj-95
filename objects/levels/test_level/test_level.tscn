@@ -6,6 +6,11 @@
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="4_ubr78"]
 [ext_resource type="PackedScene" uid="uid://co0yb5nvrs8i5" path="res://objects/ui/menus/pause_menu/pause_menu.tscn" id="6_0aflj"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="6_i335i"]
+[ext_resource type="Texture2D" uid="uid://e1bxwqdn73r8" path="res://addons/at-icons/node3d/icons.svg" id="7_d3c35"]
+[ext_resource type="Script" uid="uid://b3vlf5y3rkxx" path="res://objects/components/SpikeComponent.gd" id="8_hxsfi"]
+[ext_resource type="Script" uid="uid://fgro0qylamxm" path="res://objects/components/SpawnpointComponent.gd" id="9_a0bsl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 
 [node name="TestLevel" type="Node2D" unique_id=1614161057]
 
@@ -50,7 +55,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
 [node name="SmallExit2" parent="." unique_id=1999152599 instance=ExtResource("3_dbvfk")]
 position = Vector2(414, 266)
+
 [node name="interactable_test" parent="." unique_id=479544987 instance=ExtResource("3_dbvfk")]
 position = Vector2(53, 153)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=784447560]
+position = Vector2(266, 143)
+texture = ExtResource("7_d3c35")
+
+[node name="SpikesComponent" type="Area2D" parent="Sprite2D" unique_id=1407852414]
+script = ExtResource("8_hxsfi")
+metadata/_custom_type_script = "uid://b3vlf5y3rkxx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/SpikesComponent" unique_id=1584251070]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="SpawnpointComponent" type="Node2D" parent="." unique_id=726222156]
+position = Vector2(-29, 168)
+script = ExtResource("9_a0bsl")
+metadata/_custom_type_script = "uid://fgro0qylamxm"
