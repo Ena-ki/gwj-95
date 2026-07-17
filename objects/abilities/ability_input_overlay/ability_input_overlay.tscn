@@ -20,3 +20,5 @@ offset_right = 234.0
 offset_bottom = 57.0
 scale = Vector2(1.5, 1.5)
 placeholder_text = "Enter code"
+middle_mouse_paste_enabled = false
+selecting_enabled = false
