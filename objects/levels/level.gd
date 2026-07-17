@@ -5,5 +5,6 @@ extends Node2D
 
 
 func _ready() -> void:
-  AudioLoader.play_sound(level_music)
+  if AudioLoader.current_music.stream != level_music:
+    AudioLoader.play_music(level_music)
   
