@@ -60,3 +60,5 @@ big_jump = NodePath("../BigJump")
 jump_code = "WWW"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1936014071]
+zoom = Vector2(0.8, 0.8)
+position_smoothing_enabled = true
