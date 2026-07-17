@@ -52,8 +52,11 @@ dash_target = NodePath("..")
 jump_target = NodePath("..")
 jump_height = 200.0
 
-[node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("dash", "big_jump") instance=ExtResource("5_gnkmh")]
+[node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("camera", "dash", "big_jump") instance=ExtResource("5_gnkmh")]
 visible = false
+camera = NodePath("../Camera2D")
 dash = NodePath("../Dash")
 big_jump = NodePath("../BigJump")
 jump_code = "WWW"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1936014071]

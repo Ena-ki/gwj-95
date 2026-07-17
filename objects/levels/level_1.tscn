@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b6t8k67k5jbgd"]
+
+[ext_resource type="Script" uid="uid://d0obd18qrjfhj" path="res://objects/levels/level.gd" id="1_u0py5"]
+[ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="2_jq7b1"]
+
+[node name="Level1" type="Node2D" unique_id=812130647]
+script = ExtResource("1_u0py5")
+metadata/_custom_type_script = "uid://d0obd18qrjfhj"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1186035458]
+
+[node name="Spawnpoint" type="Node2D" parent="." unique_id=938449545]
+
+[node name="Player" parent="." unique_id=51254875 instance=ExtResource("2_jq7b1")]
