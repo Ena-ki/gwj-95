@@ -1,4 +1,5 @@
-extends Node
+class_name BigJump
+extends Node2D
 
 @export var jump_target : Node2D
 @export var jump_height : float = 100.0:
@@ -25,4 +26,5 @@ func _process(_delta: float) -> void:
 
 
 func big_jump() -> void:
-  jump_target.velocity.y = jump_velocity * 2
+  if jump_target.is_on_floor():
+    jump_target.velocity.y = jump_velocity * 2
