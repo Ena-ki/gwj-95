@@ -14,7 +14,7 @@ extends Control
 
 
 func _ready() -> void:
-  AudioLoader.play_sound(main_menu_music)
+  AudioLoader.play_music(main_menu_music)
 
   play_button.mouse_entered.connect(func() : AudioLoader.play_sound(hover_sound))
   play_button.pressed.connect(_on_play_button_pressed)
