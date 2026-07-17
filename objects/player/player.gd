@@ -7,19 +7,19 @@ extends CharacterBody2D
 @export var speed : float = 10.0
 @export var jump_height : float = 100.0:
   set(val):
-  jump_height = val
-  jump_velocity = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
-  jump_gravity = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
-  fall_gravity = ((-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)) * -1.0
+    jump_height = val
+    jump_velocity = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
+    jump_gravity = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
+    fall_gravity = ((-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)) * -1.0
 @export var jump_time_to_peak : float = 1.0:
   set(val):
-  jump_time_to_peak = val
-  jump_velocity = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
-  jump_gravity = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
+    jump_time_to_peak = val
+    jump_velocity = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
+    jump_gravity = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 @export var jump_time_to_fall : float = 1.0:
   set(val):
-  jump_time_to_fall = val
-  fall_gravity = ((-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)) * -1.0
+    jump_time_to_fall = val
+    fall_gravity = ((-2.0 * jump_height) / (jump_time_to_fall * jump_time_to_fall)) * -1.0
 
 @export_category("Node References")
 @export var visuals : Node2D
@@ -47,36 +47,37 @@ func _process(_delta: float) -> void:
 
 func _handle_jump() -> void:
   if is_on_floor():
+    pass
   if _was_on_floor == false:
     _was_on_floor = true
   if Input.is_action_just_pressed("jump") || (jump_buffer_timer.time_left > 0.0 && Input.is_action_pressed("jump")):
     _jump()
 
   else:
-  if _was_on_floor == true:
-    _was_on_floor = false
-    coyote_timer.start()
-  if Input.is_action_just_pressed("jump") :
-    if coyote_timer.time_left > 0.0:
-    _jump()
-    else:
-    jump_buffer_timer.start()
+    if _was_on_floor == true:
+      _was_on_floor = false
+      coyote_timer.start()
+    if Input.is_action_just_pressed("jump") :
+      if coyote_timer.time_left > 0.0:
+        _jump()
+      else:
+        jump_buffer_timer.start()
 
 
 func _jump() -> void:
   _was_on_floor = false
   velocity.y = jump_velocity
   if coyote_timer.time_left > 0.0:
-  coyote_timer.stop()
+    coyote_timer.stop()
   if jump_buffer_timer.time_left > 0.0:
-  jump_buffer_timer.stop()
+    jump_buffer_timer.stop()
 
 
 func _visual_flip() -> void:
   if velocity.x < 0.0:
-  visuals.scale.x = -1.0
+    visuals.scale.x = -1.0
   elif velocity.x > 0.0:
-  visuals.scale.x = 1.0
+    visuals.scale.x = 1.0
 
 
 func _get_gravity() -> float:
