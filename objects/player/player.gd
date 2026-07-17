@@ -28,6 +28,7 @@ extends CharacterBody2D
 
 @export_category("Other References")
 @export var jump_sound : AudioStream
+@export var landing_sound : AudioStream
 
 
 @onready var jump_velocity : float = (( 2.0 * jump_height) / jump_time_to_peak) * -1.0
@@ -52,6 +53,7 @@ func _process(_delta: float) -> void:
 func _handle_jump() -> void:
   if is_on_floor():
     if _was_on_floor == false:
+      AudioLoader.play_sound(landing_sound)
       _was_on_floor = true
     if Input.is_action_just_pressed("jump") || (jump_buffer_timer.time_left > 0.0 && Input.is_action_pressed("jump")):
       _jump()
@@ -68,6 +70,7 @@ func _handle_jump() -> void:
 
 
 func _jump() -> void:
+  AudioLoader.play_sound(jump_sound)
   _was_on_floor = false
   velocity.y = jump_velocity
   if coyote_timer.time_left > 0.0:

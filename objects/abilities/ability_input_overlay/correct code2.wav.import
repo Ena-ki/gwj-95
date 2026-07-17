@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dj3ise1nimgp2"
+path="res://.godot/imported/correct code2.wav-6dec784932a74e26a38fef3f6a8ff848.sample"
+
+[deps]
+
+source_file="res://objects/abilities/ability_input_overlay/correct code2.wav"
+dest_files=["res://.godot/imported/correct code2.wav-6dec784932a74e26a38fef3f6a8ff848.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

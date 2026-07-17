@@ -8,6 +8,10 @@ extends CanvasLayer
 @export var jump_code : String = "DDD"
 @export var line_edit : LineEdit
 
+@export var input_sound : AudioStream
+@export var correct_code_sound : AudioStream
+@export var wrong_code_sound : AudioStream
+
 
 func _ready() -> void:
   line_edit.text_changed.connect(_on_line_edit_text_changed)
@@ -23,17 +27,22 @@ func _process(_delta: float) -> void:
 
 func _on_line_edit_text_changed(text : String) -> void:
   if text.length() > 3:
+    AudioLoader.play_sound(wrong_code_sound)
     _exit_editing()
     return
-  print(text)
+  AudioLoader.play_sound(input_sound)
+
   if text == dash_code_left:
     dash.dash_left()
+    AudioLoader.play_sound(correct_code_sound)
     _exit_editing()
   if text == dash_code_right:
     dash.dash_right()
+    AudioLoader.play_sound(correct_code_sound)
     _exit_editing()
   if text == jump_code:
     big_jump.big_jump()
+    AudioLoader.play_sound(correct_code_sound)
     _exit_editing()
 
 
