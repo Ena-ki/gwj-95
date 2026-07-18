@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dqcx05u1ctqv6"]
+
+[ext_resource type="Script" uid="uid://bq37wlpwafxqc" path="res://objects/abilities/ability_input_overlay/ability_input_overlay.gd" id="1_vxgjj"]
+[ext_resource type="AudioStream" uid="uid://bd5sprkxb1mtk" path="res://objects/abilities/ability_input_overlay/input1.wav" id="2_1cq0t"]
+[ext_resource type="AudioStream" uid="uid://dj3ise1nimgp2" path="res://objects/abilities/ability_input_overlay/correct code2.wav" id="3_1cq0t"]
+[ext_resource type="AudioStream" uid="uid://bltpvo4sq3cwf" path="res://objects/abilities/ability_input_overlay/wrong code.wav" id="4_4clrr"]
+
+[node name="AbilityInputOverlay" type="CanvasLayer" unique_id=709631529 node_paths=PackedStringArray("line_edit")]
+layer = 5
+script = ExtResource("1_vxgjj")
+line_edit = NodePath("LineEdit")
+input_sound = ExtResource("2_1cq0t")
+correct_code_sound = ExtResource("3_1cq0t")
+wrong_code_sound = ExtResource("4_4clrr")
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1928654372]
+offset_left = 34.0
+offset_top = 33.0
+offset_right = 234.0
+offset_bottom = 57.0
+scale = Vector2(1.5, 1.5)
+placeholder_text = "Enter code"
+middle_mouse_paste_enabled = false
+selecting_enabled = false

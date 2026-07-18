@@ -6,6 +6,11 @@ extends Area2D
 @export_file("*.tscn") var new_scene : String
 @export_file("*.tscn") var transition_file : String
 
+@export var player_data : PlayerData
+@export var next_level_number : int = 0
+
+@export var exit_sound : AudioStream
+
 var _activated : bool = false
 
 
@@ -15,10 +20,13 @@ func _ready() -> void:
 
 func _on_body_entered(body : Node2D) -> void:
   if body is Player and !_activated:
+    AudioLoader.play_sound(exit_sound)
     _activated = true
     var tween := create_tween()
     tween.tween_property(Engine, "time_scale", 0.0, 0.2)
     SceneLoader.change_scene(new_scene, transition_file)
+    if player_data.level_progress < next_level_number:
+      player_data.level_progress = next_level_number
 
 
 func _exit_tree() -> void:

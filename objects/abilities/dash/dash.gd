@@ -1,3 +1,4 @@
+class_name Dash
 extends Node2D
 
 @export var dash_target : Node2D

@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://yyd1fw8lmcpc" path="res://objects/ui/menus/pause_menu/pause_menu.gd" id="1_cy7jg"]
 [ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="2_p0sgo"]
+[ext_resource type="AudioStream" uid="uid://ckbs20jtte0po" path="res://objects/ui/moving in UI.wav" id="2_q7y5h"]
 [ext_resource type="PackedScene" uid="uid://b65bbbeexcs2m" path="res://objects/ui/menus/settings_menu/settings_menu.tscn" id="2_xifte"]
+[ext_resource type="AudioStream" uid="uid://dgy4132g6cd5h" path="res://objects/ui/Select UI.wav" id="3_inghj"]
+[ext_resource type="AudioStream" uid="uid://by6nb18ngfcnk" path="res://objects/ui/Going Back UI.wav" id="4_lpnja"]
 
 [node name="PauseMenu" type="Control" unique_id=1417159843 node_paths=PackedStringArray("resume_button", "settings_button", "main_menu_button", "settings_menu")]
 layout_mode = 3
@@ -15,6 +18,9 @@ script = ExtResource("1_cy7jg")
 resume_button = NodePath("MarginContainer/PanelContainer/VBoxContainer/ResumeButton")
 settings_button = NodePath("MarginContainer/PanelContainer/VBoxContainer/SettingsButton")
 main_menu_button = NodePath("MarginContainer/PanelContainer/VBoxContainer/MainMenuButton")
+hover_sound = ExtResource("2_q7y5h")
+selecting_sound = ExtResource("3_inghj")
+back_sound = ExtResource("4_lpnja")
 settings_menu = NodePath("SettingsMenu")
 main_menu_scene = "uid://c0f5rw8q2r1lu"
 transition_scene = "uid://cl1ie1240smrh"
