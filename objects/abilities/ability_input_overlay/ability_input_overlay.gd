@@ -40,16 +40,19 @@ func _on_line_edit_text_changed(text : String) -> void:
     _exit_editing()
     return
   AudioLoader.play_sound(input_sound, -2.0, true)
+  var l_text = text.to_lower().strip_edges()
 
-  if text == dash_code_left:
+  if l_text == dash_code_left:
     dash.dash_left()
     AudioLoader.play_sound(correct_code_sound, 1.0, true)
     _exit_editing()
-  if text == dash_code_right:
+
+  if l_text == dash_code_right.to_lower():
     dash.dash_right()
     AudioLoader.play_sound(correct_code_sound, 1.0, true)
     _exit_editing()
-  if text == jump_code:
+
+  if l_text == jump_code:
     big_jump.big_jump()
     AudioLoader.play_sound(correct_code_sound, 1.0, true)
     _exit_editing()
