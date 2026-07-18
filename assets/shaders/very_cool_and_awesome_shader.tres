@@ -7,6 +7,6 @@ shader = ExtResource("1_1ceta")
 shader_parameter/bloom_radius = 1.5
 shader_parameter/bloom_threshold = 0.6
 shader_parameter/bloom_intensity = 3.0
-shader_parameter/color_map = PackedColorArray(0, 0, 0, 1, 0.5192838, 0.0010247037, 0.66079503, 1, 0.7313724, 0.34964776, 0.99999994, 1, 1, 1, 1, 1)
+shader_parameter/color_map = PackedColorArray(0, 0, 0, 1, 0.2154918, 2.45166e-07, 4.813075e-08, 1, 0, 0, 0, 1, 1, 0, 0, 1)
 shader_parameter/aspect = 0.75
 shader_parameter/curve = 0.2270000107825
