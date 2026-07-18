@@ -27,7 +27,7 @@ position = Vector2(238, 257)
 position = Vector2(497, 202)
 
 [node name="SmallExit2" parent="." unique_id=652881012 instance=ExtResource("3_dbvfk")]
-position = Vector2(1, 195)
+position = Vector2(0, 210)
 new_scene = "uid://hhvesa456fp1"
 exit_sound = ExtResource("6_d3c35")
 

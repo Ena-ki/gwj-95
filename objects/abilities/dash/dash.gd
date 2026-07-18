@@ -6,7 +6,7 @@ extends Node2D
 @export var top_ray : RayCast2D
 @export var bot_ray : RayCast2D
 
-@export var dash_distance : float = 64
+@export var dash_distance : float = 256
 @export var dash_margin : float = 16
 @export var dash_glitch_effect : PackedScene
 
