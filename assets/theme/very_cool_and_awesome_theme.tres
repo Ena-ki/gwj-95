@@ -69,6 +69,24 @@ region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_732r1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhats"]
+content_margin_left = 10.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68j5j"]
+content_margin_left = 10.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_q6kom"]
 atlas = ExtResource("2_fhats")
 region = Rect2(32, 32, 32, 32)
@@ -87,6 +105,8 @@ CheckBox/styles/hover = SubResource("StyleBoxEmpty_732r1")
 CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_732r1")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_732r1")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_732r1")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_fhats")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_68j5j")
 OptionButton/icons/arrow = SubResource("AtlasTexture_q6kom")
 OptionButton/styles/disabled = ExtResource("1_4i03r")
 OptionButton/styles/disabled_mirrored = ExtResource("1_4i03r")

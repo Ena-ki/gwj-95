@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://d2tjot1fcv4pd" path="res://objects/ui/menus/level_selector/level_selector.gd" id="1_kaxra"]
 [ext_resource type="Script" uid="uid://cl130e5ueeoei" path="res://objects/ui/components/cool_button_effect.gd" id="2_bd2h2"]
 [ext_resource type="Resource" uid="uid://df6xvlbuhiady" path="res://data/player_data.tres" id="2_dl0la"]
+[ext_resource type="AudioStream" uid="uid://ckbs20jtte0po" path="res://objects/ui/moving in UI.wav" id="3_b1f2w"]
+[ext_resource type="AudioStream" uid="uid://dgy4132g6cd5h" path="res://objects/ui/Select UI.wav" id="4_spd33"]
+[ext_resource type="AudioStream" uid="uid://by6nb18ngfcnk" path="res://objects/ui/Going Back UI.wav" id="5_l0jld"]
 
 [node name="LevelSelector" type="Control" unique_id=1740501550 node_paths=PackedStringArray("back_button", "level_select_buttons")]
 layout_mode = 3
@@ -14,9 +17,12 @@ grow_vertical = 2
 script = ExtResource("1_kaxra")
 back_button = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton")
 level_select_buttons = [NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton1"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton2"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton3"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton4"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton5")]
-level_scenes = Array[String](["uid://hhvesa456fp1", "", "", "", ""])
+level_scenes = Array[String](["uid://b6t8k67k5jbgd", "uid://hhvesa456fp1", "", "", ""])
 transition_scene = "uid://cl1ie1240smrh"
 player_data = ExtResource("2_dl0la")
+hover_sound = ExtResource("3_b1f2w")
+selecting_sound = ExtResource("4_spd33")
+back_sound = ExtResource("5_l0jld")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1364146066]
 layout_mode = 1

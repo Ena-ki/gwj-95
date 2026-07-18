@@ -1,28 +1,38 @@
 [gd_scene format=3 uid="uid://qon0aa4u2xs"]
 
 [ext_resource type="Script" uid="uid://bmx8vjs2bnqfc" path="res://objects/player/player.gd" id="1_cqmt1"]
-[ext_resource type="Texture2D" uid="uid://clyyo0r3hwr7i" path="res://objects/player/player_placeholder.jpg" id="2_g7ett"]
+[ext_resource type="AudioStream" uid="uid://5sa7mn7rdmap" path="res://objects/player/jumping.wav" id="2_xkryw"]
+[ext_resource type="AudioStream" uid="uid://bmu1kjbdsyfpe" path="res://objects/player/landing.wav" id="3_ow0dq"]
 [ext_resource type="PackedScene" uid="uid://bj6eeoxeeq2ll" path="res://objects/abilities/dash/dash.tscn" id="3_ssrue"]
 [ext_resource type="PackedScene" uid="uid://dmvhcgpdyg38p" path="res://objects/abilities/big_jump/big_jump.tscn" id="4_jnjyq"]
+[ext_resource type="AudioStream" uid="uid://bltpvo4sq3cwf" path="res://objects/abilities/ability_input_overlay/wrong code.wav" id="4_m4kly"]
+[ext_resource type="PackedScene" uid="uid://dqcx05u1ctqv6" path="res://objects/abilities/ability_input_overlay/ability_input_overlay.tscn" id="5_gnkmh"]
+[ext_resource type="Texture2D" uid="uid://d2qdhwmtopy2y" path="res://assets/things_atlas.png" id="5_m4kly"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4kly"]
+atlas = ExtResource("5_m4kly")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljj53"]
-size = Vector2(28, 28)
+size = Vector2(24, 24)
 
 [node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals", "coyote_timer", "jump_buffer_timer")]
 safe_margin = 0.15
 script = ExtResource("1_cqmt1")
-speed = 150.0
-jump_time_to_peak = 0.5
-jump_time_to_fall = 0.34
+speed = 170.0
+jump_time_to_peak = 0.35
+jump_time_to_fall = 0.3
 visuals = NodePath("Visuals")
 coyote_timer = NodePath("CoyoteTimer")
 jump_buffer_timer = NodePath("JumpBufferTimer")
+jump_sound = ExtResource("2_xkryw")
+landing_sound = ExtResource("3_ow0dq")
+death_sound = ExtResource("4_m4kly")
 
 [node name="Visuals" type="Node2D" parent="." unique_id=518828244]
 
-[node name="PlayerPlaceholder" type="Sprite2D" parent="Visuals" unique_id=1801857521]
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("2_g7ett")
+[node name="Sprite2D" type="Sprite2D" parent="Visuals" unique_id=1801857521]
+texture = SubResource("AtlasTexture_m4kly")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953772264]
 shape = SubResource("RectangleShape2D_ljj53")
@@ -41,3 +51,14 @@ dash_target = NodePath("..")
 [node name="BigJump" parent="." unique_id=1882994134 node_paths=PackedStringArray("jump_target") instance=ExtResource("4_jnjyq")]
 jump_target = NodePath("..")
 jump_height = 200.0
+
+[node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("camera", "dash", "big_jump") instance=ExtResource("5_gnkmh")]
+visible = false
+camera = NodePath("../Camera2D")
+dash = NodePath("../Dash")
+big_jump = NodePath("../BigJump")
+jump_code = "WWW"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1936014071]
+zoom = Vector2(0.8, 0.8)
+position_smoothing_enabled = true
