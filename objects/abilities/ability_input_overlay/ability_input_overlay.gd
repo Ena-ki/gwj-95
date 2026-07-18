@@ -6,7 +6,7 @@ extends CanvasLayer
 @export var big_jump : BigJump
 @export var dash_code_left : String = "AAA"
 @export var dash_code_right : String = "DDD"
-@export var jump_code : String = "DDD"
+@export var jump_code : String = "WWW"
 @export var line_edit : LineEdit
 
 @export var input_sound : AudioStream
@@ -42,7 +42,8 @@ func _on_line_edit_text_changed(text : String) -> void:
   AudioLoader.play_sound(input_sound, -2.0, true)
   var l_text = text.to_lower().strip_edges()
 
-  if l_text == dash_code_left:
+
+  if l_text == dash_code_left.to_lower():
     dash.dash_left()
     AudioLoader.play_sound(correct_code_sound, 1.0, true)
     _exit_editing()
@@ -52,7 +53,7 @@ func _on_line_edit_text_changed(text : String) -> void:
     AudioLoader.play_sound(correct_code_sound, 1.0, true)
     _exit_editing()
 
-  if l_text == jump_code:
+  if l_text == jump_code.to_lower():
     big_jump.big_jump()
     AudioLoader.play_sound(correct_code_sound, 1.0, true)
     _exit_editing()
