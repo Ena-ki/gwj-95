@@ -49,7 +49,7 @@ alignment = 1
 custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Resume
+text = "RESUME
 "
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/VBoxContainer/ResumeButton" unique_id=853581197]
@@ -60,8 +60,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Settings
-"
+text = "SETTINGS"
 
 [node name="CoolButtonEffect2" type="Node" parent="MarginContainer/PanelContainer/VBoxContainer/SettingsButton" unique_id=1742359568]
 script = ExtResource("2_p0sgo")
@@ -71,7 +70,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 custom_minimum_size = Vector2(140, 30)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Main menu"
+text = "MAIN MENU"
 
 [node name="CoolButtonEffect3" type="Node" parent="MarginContainer/PanelContainer/VBoxContainer/MainMenuButton" unique_id=502556523]
 script = ExtResource("2_p0sgo")

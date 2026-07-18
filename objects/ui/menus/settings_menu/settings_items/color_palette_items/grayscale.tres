@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_7qutw")
 palette = Array[Color]([Color(0, 0, 0, 1), Color(0.20152658, 0.20152658, 0.20152652, 1), Color(0, 0, 0, 1), Color(0.8047426, 0.80474263, 0.8047426, 1)])
-palette_name = "Grayscale"
+palette_name = " GRAYSCALE"
 metadata/_custom_type_script = "uid://dpf30ng785gfw"

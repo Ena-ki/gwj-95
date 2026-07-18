@@ -22,9 +22,6 @@ tile_set = ExtResource("1_dbvfk")
 
 [node name="Player" parent="." unique_id=51254875 instance=ExtResource("2_ljj53")]
 position = Vector2(238, 257)
-speed = 170.0
-jump_time_to_peak = 0.35
-jump_time_to_fall = 0.3
 
 [node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("3_dbvfk")]
 position = Vector2(497, 202)

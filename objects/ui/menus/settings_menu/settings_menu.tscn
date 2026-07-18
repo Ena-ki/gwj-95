@@ -59,7 +59,7 @@ theme_override_constants/separation = 13
 custom_minimum_size = Vector2(50, 30)
 layout_mode = 2
 size_flags_horizontal = 0
-text = "back"
+text = "BACK"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton" unique_id=663347526]
 script = ExtResource("4_l3bxj")
@@ -72,7 +72,7 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/FullscreenItem" unique_id=1407435450]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Fullscreen"
+text = "FULLSCREEN"
 vertical_alignment = 1
 
 [node name="CheckBox" type="CheckBox" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/FullscreenItem" unique_id=1028661726]
