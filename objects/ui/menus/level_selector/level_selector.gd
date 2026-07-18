@@ -12,6 +12,9 @@ extends Control
 
 
 func _ready() -> void:
+  print(player_data.current_palette)
+  for i in range(player_data.level_times.size()):
+    print(player_data.level_times[i])
   for i in range(level_select_buttons.size()):
     level_select_buttons[i].mouse_entered.connect(func() : AudioLoader.play_sound(hover_sound))
   level_select_buttons[0].pressed.connect(_on_level_select_button_1_pressed)
