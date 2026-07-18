@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://csq6ckoovdop4"
-path="res://.godot/imported/visitor2.ttf-85c84302ff10152396dd74330608d206.fontdata"
+uid="uid://kk1q7nmvml7q"
+path="res://.godot/imported/Workbench-Regular-VariableFont_BLED,SCAN.ttf-8ab97fa338a7ab66c0db717e1ebc5581.fontdata"
 
 [deps]
 
-source_file="res://assets/theme/visitor-brk/visitor2.ttf"
-dest_files=["res://.godot/imported/visitor2.ttf-85c84302ff10152396dd74330608d206.fontdata"]
+source_file="res://assets/theme/workbench_font/Workbench-Regular-VariableFont_BLED,SCAN.ttf"
+dest_files=["res://.godot/imported/Workbench-Regular-VariableFont_BLED,SCAN.ttf-8ab97fa338a7ab66c0db717e1ebc5581.fontdata"]
 
 [params]
 
@@ -30,7 +30,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "Новая конфигурация",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}
