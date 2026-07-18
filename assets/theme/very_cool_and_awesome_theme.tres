@@ -2,6 +2,7 @@
 
 [ext_resource type="StyleBox" uid="uid://dvu5pl5402877" path="res://assets/theme/panel.tres" id="1_4i03r"]
 [ext_resource type="Texture2D" uid="uid://dix55a20wmu8d" path="res://assets/theme/ui_atlas.png" id="2_fhats"]
+[ext_resource type="FontFile" uid="uid://kk1q7nmvml7q" path="res://assets/theme/workbench_font/Workbench-Regular-VariableFont_BLED,SCAN.ttf" id="3_68j5j"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxof5"]
 load_path = "res://.godot/imported/ui_atlas.png-168355f8fd37826246c334c786008a64.ctex"
@@ -92,6 +93,7 @@ atlas = ExtResource("2_fhats")
 region = Rect2(32, 32, 32, 32)
 
 [resource]
+default_font = ExtResource("3_68j5j")
 Button/styles/focus = SubResource("StyleBoxTexture_fhats")
 Button/styles/hover = SubResource("StyleBoxTexture_wvq5h")
 Button/styles/normal = SubResource("StyleBoxTexture_60ec6")
