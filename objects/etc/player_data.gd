@@ -10,4 +10,5 @@ signal level_progress_updated(level_progress : int)
   get:
     return level_progress
 
-@export var current_theme : int = 0
+@export var current_palette : ColorPaletteItem #grep current_theme
+@export var current_palette_id : int = 0
