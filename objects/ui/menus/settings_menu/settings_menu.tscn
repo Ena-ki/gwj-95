@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://gqfvgsd80ii2" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/purpur.tres" id="10_x1lxj"]
 [ext_resource type="Resource" uid="uid://biopjckjg16t6" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/silent_green.tres" id="11_6oohq"]
 [ext_resource type="Resource" uid="uid://ce5b2a6spmr2n" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/ocean.tres" id="11_xjkj7"]
+[ext_resource type="Resource" uid="uid://df6xvlbuhiady" path="res://data/player_data.tres" id="14_x1lxj"]
 
 [node name="SettingsMenu" type="Control" unique_id=194135482 node_paths=PackedStringArray("back_button", "fullscreen_button")]
 visible = false
@@ -87,4 +88,5 @@ layout_mode = 2
 script = ExtResource("2_yvqt7")
 shader = ExtResource("4_3tf4i")
 palettes = Array[ExtResource("5_mmxrv")]([ExtResource("9_xrgby"), ExtResource("10_x1lxj"), ExtResource("11_xjkj7"), ExtResource("7_lxv02"), ExtResource("11_6oohq")])
+player_data = ExtResource("14_x1lxj")
 metadata/_custom_type_script = "uid://c5wxkm3mjf0eb"
