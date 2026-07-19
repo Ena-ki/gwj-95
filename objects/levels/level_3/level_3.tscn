@@ -34,7 +34,7 @@ spike_layer = NodePath("../TileMapLayer2")
 
 [node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("3_y57h1")]
 position = Vector2(688, 1680)
-new_scene = "uid://c8h1ldewakund"
+new_scene = "uid://c4akg830wc3ro"
 transition_scene = "uid://cl1ie1240smrh"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=91106231]

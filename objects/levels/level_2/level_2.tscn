@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d0obd18qrjfhj" path="res://objects/levels/level.gd" id="1_0828y"]
 [ext_resource type="TileSet" uid="uid://crja43eqt1kdv" path="res://objects/levels/tilesets/test_set.tres" id="1_u31on"]
 [ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="2_38dwh"]
+[ext_resource type="PackedScene" uid="uid://bbgx583hnstu5" path="res://objects/levels/level_objects/level_exit/small_exit.tscn" id="3_0828y"]
 [ext_resource type="AudioStream" uid="uid://c50rgess0jrvt" path="res://objects/levels/test_level/main music2.mp3" id="2_gudm6"]
 [ext_resource type="PackedScene" uid="uid://co0yb5nvrs8i5" path="res://objects/ui/menus/pause_menu/pause_menu.tscn" id="4_gudm6"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="5_e3076"]
@@ -50,3 +51,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("3_0828y")]
+position = Vector2(2227, -624)
+new_scene = "uid://c8h1ldewakund"
+transition_scene = "uid://cl1ie1240smrh"

@@ -139,6 +139,7 @@ script = ExtResource("2_bd2h2")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
 [node name="LevelSelectButton5" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=12334627]
+visible = false
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
