@@ -97,8 +97,8 @@ func _visual_flip() -> void:
 func _get_gravity() -> float:
   return jump_gravity if velocity.y < 0.0 else fall_gravity
 
-func die():
-  SpawnpointManager.respawn_player(self)
-  
+#func die():
+ # SpawnpointManager.respawn_player(self)
+  #are we fucking serious
 # add more here if you'd like
   
