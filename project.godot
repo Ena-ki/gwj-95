@@ -22,8 +22,9 @@ buses/default_bus_layout="uid://dqoyfuw2l8bl0"
 [autoload]
 
 SceneLoader="*uid://jb4bi2je2jso"
-SpawnpointManager="*uid://cgm7mblifv2y7"
 AudioLoader="*uid://cjjep500jei62"
+SpawnpointManager="*uid://cgm7mblifv2y7"
+SaveManager="*uid://cr6uod61slw1c"
 
 [display]
 
@@ -51,6 +52,7 @@ folder_colors={
 
 theme/default_font_multichannel_signed_distance_field=true
 theme/custom="uid://ds7og8ohncbi7"
+theme/custom_font="uid://bo164bv08xr61"
 
 [input]
 
