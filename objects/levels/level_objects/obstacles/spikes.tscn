@@ -11,7 +11,6 @@ region = Rect2(0, 0, 32, 32)
 size = Vector2(20, 16)
 
 [node name="Spikes" type="Area2D" unique_id=350818033]
-collision_mask = 0
 script = ExtResource("1_i06ml")
 metadata/_custom_type_script = "uid://nhsgd0jop1tt"
 
