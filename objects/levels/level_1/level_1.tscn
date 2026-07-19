@@ -31,7 +31,7 @@ position = Vector2(-33, 153)
 [node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("10_u2r5d")]
 position = Vector2(335, -205)
 new_scene = "uid://bhi7tnr5u6lex"
-next_level_number = 2
+transition_scene = "uid://cl1ie1240smrh"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=878634309]
 
@@ -54,7 +54,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Key" parent="." unique_id=1688077425 node_paths=PackedStringArray("map") instance=ExtResource("8_e5q31")]
-position = Vector2(1340, -53)
+position = Vector2(1055, -46)
 blocks_to_erase = Array[Vector2i]([Vector2i(18, -8), Vector2i(18, -7), Vector2i(18, -6)])
 map = NodePath("../TileMapLayer")
 collect_sound = ExtResource("9_fcn4d")
