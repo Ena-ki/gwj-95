@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cntjjfxoilh6e"]
 
-[ext_resource type="Script" uid="uid://nhsgd0jop1tt" path="res://objects/levels/level_objects/obstacles/obstacle.gd" id="1_i06ml"]
+[ext_resource type="Script" uid="uid://b3vlf5y3rkxx" path="res://objects/components/SpikeComponent.gd" id="1_erbt4"]
 [ext_resource type="Texture2D" uid="uid://d2qdhwmtopy2y" path="res://assets/things_atlas.png" id="2_upkcm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i06ml"]
@@ -10,10 +10,9 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upkcm"]
 size = Vector2(20, 16)
 
-[node name="Spikes" type="Area2D" unique_id=350818033]
-collision_mask = 0
-script = ExtResource("1_i06ml")
-metadata/_custom_type_script = "uid://nhsgd0jop1tt"
+[node name="SpikesComponent" type="Area2D" unique_id=35186828]
+script = ExtResource("1_erbt4")
+metadata/_custom_type_script = "uid://b3vlf5y3rkxx"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1977365352]
 texture = SubResource("AtlasTexture_i06ml")

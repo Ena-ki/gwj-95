@@ -41,9 +41,9 @@ signal died
 var _was_on_floor : bool = true
 
 
-func die() -> void:
-  AudioLoader.play_sound(death_sound)
-  died.emit()
+#func die() -> void:
+ # AudioLoader.play_sound(death_sound)
+  #died.emit()
 
 
 func _physics_process(delta: float) -> void:
@@ -97,8 +97,9 @@ func _visual_flip() -> void:
 func _get_gravity() -> float:
   return jump_gravity if velocity.y < 0.0 else fall_gravity
 
-#func die():
- # SpawnpointManager.respawn_player(self)
+func die():
+  AudioLoader.play_sound(death_sound)
+  SpawnpointManager.respawn_player(self)
   # FUUUUUUUUUUUUUUUUUUUCKKKKKKKKKKKKKKKKKK
 # add more here if you'd like
   

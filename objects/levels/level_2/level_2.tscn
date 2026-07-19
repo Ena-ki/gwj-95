@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://co0yb5nvrs8i5" path="res://objects/ui/menus/pause_menu/pause_menu.tscn" id="4_gudm6"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="5_e3076"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="6_jpgkh"]
+[ext_resource type="Script" uid="uid://fgro0qylamxm" path="res://objects/components/SpawnpointComponent.gd" id="8_u31on"]
 [ext_resource type="PackedScene" uid="uid://cntjjfxoilh6e" path="res://objects/levels/level_objects/obstacles/spikes.tscn" id="9_38dwh"]
 
 [node name="Level 2" type="Node2D" unique_id=645543969]
@@ -124,3 +125,8 @@ rotation = -3.1415927
 [node name="Spikes24" parent="." unique_id=766359138 instance=ExtResource("9_38dwh")]
 position = Vector2(2181, -688)
 rotation = -3.1415927
+
+[node name="SpawnpointComponent" type="Node2D" parent="." unique_id=2048677752]
+position = Vector2(490, -933)
+script = ExtResource("8_u31on")
+metadata/_custom_type_script = "uid://fgro0qylamxm"
