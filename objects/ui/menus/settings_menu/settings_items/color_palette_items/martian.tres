@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ColorPaletteItem" format=3 uid="uid://crw87cx5frfsb"]
+
+[ext_resource type="Script" uid="uid://dpf30ng785gfw" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_item.gd" id="1_74ovm"]
+
+[resource]
+script = ExtResource("1_74ovm")
+palette = Array[Color]([Color(0.14509805, 0.11372549, 0.22745098, 1), Color(0.16470589, 0.14509805, 0.3137255, 1), Color(0.8784314, 0.3019608, 0.003921569, 1), Color(1, 0.46666667, 0, 1)])
+palette_name = " MARTIAN"
+metadata/_custom_type_script = "uid://dpf30ng785gfw"

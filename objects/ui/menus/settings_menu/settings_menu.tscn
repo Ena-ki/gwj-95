@@ -14,6 +14,9 @@
 [ext_resource type="Resource" uid="uid://biopjckjg16t6" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/silent_green.tres" id="11_6oohq"]
 [ext_resource type="Resource" uid="uid://ce5b2a6spmr2n" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/ocean.tres" id="11_xjkj7"]
 [ext_resource type="Resource" uid="uid://df6xvlbuhiady" path="res://data/player_data.tres" id="14_x1lxj"]
+[ext_resource type="Resource" uid="uid://crw87cx5frfsb" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/martian.tres" id="14_xjkj7"]
+[ext_resource type="Resource" uid="uid://cct7p712d4o07" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/caramel.tres" id="15_6oohq"]
+[ext_resource type="Resource" uid="uid://d1se2j1ds5wu3" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_items/cherry_ade.tres" id="16_g8q1m"]
 
 [node name="SettingsMenu" type="Control" unique_id=194135482 node_paths=PackedStringArray("back_button", "fullscreen_button")]
 visible = false
@@ -88,6 +91,6 @@ layout_mode = 2
 allow_reselect = true
 script = ExtResource("2_yvqt7")
 shader = ExtResource("4_3tf4i")
-palettes = Array[ExtResource("5_mmxrv")]([ExtResource("9_xrgby"), ExtResource("10_x1lxj"), ExtResource("11_xjkj7"), ExtResource("7_lxv02"), ExtResource("11_6oohq")])
+palettes = Array[ExtResource("5_mmxrv")]([ExtResource("9_xrgby"), ExtResource("10_x1lxj"), ExtResource("11_xjkj7"), ExtResource("7_lxv02"), ExtResource("11_6oohq"), ExtResource("14_xjkj7"), ExtResource("15_6oohq"), ExtResource("16_g8q1m")])
 player_data = ExtResource("14_x1lxj")
 metadata/_custom_type_script = "uid://c5wxkm3mjf0eb"

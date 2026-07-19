@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_lhkmi")
-palette = Array[Color]([Color(0, 0, 0, 1), Color(0.18790439, 8.7236984e-08, 3.008172e-08, 1), Color(0.32799917, 0.095664464, 0, 1), Color(1, 0, 0, 1)])
+palette = Array[Color]([Color(0, 0, 0, 1), Color(0.15158993, 0.05548212, 0.05019059, 1), Color(0, 0, 0, 1), Color(1, 0, 0, 1)])
 palette_name = " EXIT CODE"
 metadata/_custom_type_script = "uid://dpf30ng785gfw"

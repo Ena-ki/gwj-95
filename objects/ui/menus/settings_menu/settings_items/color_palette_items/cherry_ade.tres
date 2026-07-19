@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ColorPaletteItem" format=3 uid="uid://d1se2j1ds5wu3"]
+
+[ext_resource type="Script" uid="uid://dpf30ng785gfw" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_item.gd" id="1_4sdkd"]
+
+[resource]
+script = ExtResource("1_4sdkd")
+palette = Array[Color]([Color(0.20784314, 0.3137255, 0.4392157, 1), Color(0.42745098, 0.34901962, 0.47843137, 1), Color(0.70980394, 0.39607844, 0.4627451, 1), Color(0.8980392, 0.41960785, 0.43529412, 1)])
+palette_name = "RED DAWN"
+metadata/_custom_type_script = "uid://dpf30ng785gfw"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ColorPaletteItem" format=3 uid="uid://cct7p712d4o07"]
+
+[ext_resource type="Script" uid="uid://dpf30ng785gfw" path="res://objects/ui/menus/settings_menu/settings_items/color_palette_item.gd" id="1_lxkx1"]
+
+[resource]
+script = ExtResource("1_lxkx1")
+palette = Array[Color]([Color(0.20784314, 0.16862746, 0.09803922, 1), Color(0.45882353, 0.36862746, 0.21960784, 1), Color(0.70980394, 0.5686275, 0.34117648, 1), Color(0.95686275, 0.76862746, 0.45882353, 1)])
+palette_name = "CARAMEL"
+metadata/_custom_type_script = "uid://dpf30ng785gfw"
