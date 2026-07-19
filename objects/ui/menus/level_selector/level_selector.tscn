@@ -54,7 +54,7 @@ layout_mode = 2
 [node name="BackButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1049198902]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "back"
+text = "BACK"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton" unique_id=1594855923]
 script = ExtResource("2_bd2h2")
@@ -64,7 +64,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 50
-text = "level select"
+text = "SELECT LEVEL"
 horizontal_alignment = 1
 vertical_alignment = 2
 
