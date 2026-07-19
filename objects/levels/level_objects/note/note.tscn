@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dj7ltaf5mxtkv"]
+
+[ext_resource type="Script" uid="uid://d2t1gslig5pyx" path="res://objects/levels/level_objects/note/note.gd" id="1_2hwah"]
+[ext_resource type="Texture2D" uid="uid://d2qdhwmtopy2y" path="res://assets/things_atlas.png" id="2_xqeiw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqeiw"]
+radius = 45.17743
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hwah"]
+atlas = ExtResource("2_xqeiw")
+region = Rect2(0, 96, 32, 32)
+
+[node name="Note" type="Area2D" unique_id=1973376077 node_paths=PackedStringArray("label")]
+script = ExtResource("1_2hwah")
+label = NodePath("RichTextLabel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1094723391]
+shape = SubResource("CircleShape2D_xqeiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=455911482]
+texture = SubResource("AtlasTexture_2hwah")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=900251267]
+custom_minimum_size = Vector2(140, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -139.0
+offset_right = 20.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset_ratio = Vector2(0.5, 1)
+text = "test text thingy"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 2

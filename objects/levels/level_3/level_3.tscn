@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://co0yb5nvrs8i5" path="res://objects/ui/menus/pause_menu/pause_menu.tscn" id="4_p3ijf"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="5_1tuow"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="6_3xl87"]
+[ext_resource type="PackedScene" uid="uid://dj7ltaf5mxtkv" path="res://objects/levels/level_objects/note/note.tscn" id="9_1tuow"]
 
 [node name="Level 3" type="Node2D" unique_id=281750375 node_paths=PackedStringArray("player", "spawnpoint")]
 script = ExtResource("1_y57h1")
@@ -56,3 +57,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Note" parent="." unique_id=1973376077 instance=ExtResource("9_1tuow")]
+position = Vector2(2884, 759)
+text = "Remove spikes
+S - S - S
+5 seconds"
