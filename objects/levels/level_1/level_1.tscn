@@ -4,6 +4,7 @@
 [ext_resource type="TileSet" uid="uid://crja43eqt1kdv" path="res://objects/levels/tilesets/test_set.tres" id="2_1lxcf"]
 [ext_resource type="AudioStream" uid="uid://c50rgess0jrvt" path="res://objects/levels/test_level/main music2.mp3" id="2_cron0"]
 [ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="2_jq7b1"]
+[ext_resource type="Resource" uid="uid://df6xvlbuhiady" path="res://data/player_data.tres" id="3_4rpck"]
 [ext_resource type="PackedScene" uid="uid://co0yb5nvrs8i5" path="res://objects/ui/menus/pause_menu/pause_menu.tscn" id="5_sc4ir"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="6_e5q31"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="7_fcn4d"]
@@ -16,6 +17,8 @@ script = ExtResource("1_u0py5")
 level_music = ExtResource("2_cron0")
 player = NodePath("Player")
 spawnpoint = NodePath("Spawnpoint")
+level_number = 1
+player_data = ExtResource("3_4rpck")
 metadata/_custom_type_script = "uid://d0obd18qrjfhj"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1186035458]
