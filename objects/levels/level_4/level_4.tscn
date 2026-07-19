@@ -1,16 +1,28 @@
 [gd_scene format=4 uid="uid://c4akg830wc3ro"]
 
 [ext_resource type="PackedScene" uid="uid://qon0aa4u2xs" path="res://objects/player/player.tscn" id="1_0vq1w"]
+[ext_resource type="Script" uid="uid://d0obd18qrjfhj" path="res://objects/levels/level.gd" id="1_dndf4"]
 [ext_resource type="PackedScene" uid="uid://f3a75v1tgcr6" path="res://objects/levels/level_objects/key/key.tscn" id="1_hstag"]
 [ext_resource type="TileSet" uid="uid://crja43eqt1kdv" path="res://objects/levels/tilesets/test_set.tres" id="1_n0bdg"]
 [ext_resource type="AudioStream" uid="uid://dj3ise1nimgp2" path="res://objects/abilities/ability_input_overlay/correct code2.wav" id="2_dndf4"]
 [ext_resource type="PackedScene" uid="uid://bbgx583hnstu5" path="res://objects/levels/level_objects/level_exit/small_exit.tscn" id="2_n0bdg"]
+[ext_resource type="AudioStream" uid="uid://c50rgess0jrvt" path="res://objects/levels/test_level/main music2.mp3" id="2_s6tc3"]
+[ext_resource type="Resource" uid="uid://df6xvlbuhiady" path="res://data/player_data.tres" id="3_02j0q"]
 [ext_resource type="PackedScene" uid="uid://co0yb5nvrs8i5" path="res://objects/ui/menus/pause_menu/pause_menu.tscn" id="3_uurvl"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="4_o7isu"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="5_hstag"]
 [ext_resource type="PackedScene" uid="uid://cntjjfxoilh6e" path="res://objects/levels/level_objects/obstacles/spikes.tscn" id="7_uurvl"]
 
-[node name="Level 4" type="Node2D" unique_id=1291790149]
+[node name="Level 4" type="Node2D" unique_id=1556811882 node_paths=PackedStringArray("player")]
+script = ExtResource("1_dndf4")
+level_music = ExtResource("2_s6tc3")
+player = NodePath("Player")
+level_number = 4
+player_data = ExtResource("3_02j0q")
+metadata/_custom_type_script = "uid://d0obd18qrjfhj"
+
+[node name="Spawnpoint" type="Node2D" parent="." unique_id=877940777]
+position = Vector2(114, 95)
 
 [node name="Key" parent="." unique_id=1688077425 node_paths=PackedStringArray("map") instance=ExtResource("1_hstag")]
 position = Vector2(1720, -752)
@@ -160,28 +172,28 @@ position = Vector2(-272, -464)
 
 [node name="Spikes14" parent="." unique_id=1808345111 instance=ExtResource("7_uurvl")]
 position = Vector2(784, -880)
-rotation = 3.1415927
+rotation = -3.1415925
 
 [node name="Spikes15" parent="." unique_id=1842718035 instance=ExtResource("7_uurvl")]
 position = Vector2(816, -880)
-rotation = 3.1415927
+rotation = -3.1415925
 
 [node name="Spikes16" parent="." unique_id=389235358 instance=ExtResource("7_uurvl")]
 position = Vector2(848, -880)
-rotation = 3.1415927
+rotation = -3.1415925
 
 [node name="Spikes17" parent="." unique_id=834845758 instance=ExtResource("7_uurvl")]
 position = Vector2(880, -880)
-rotation = 3.1415927
+rotation = -3.1415925
 
 [node name="Spikes18" parent="." unique_id=2099315339 instance=ExtResource("7_uurvl")]
 position = Vector2(912, -880)
-rotation = 3.1415927
+rotation = -3.1415925
 
 [node name="Spikes19" parent="." unique_id=841715905 instance=ExtResource("7_uurvl")]
 position = Vector2(944, -880)
-rotation = 3.1415927
+rotation = -3.1415925
 
 [node name="Spikes20" parent="." unique_id=563271711 instance=ExtResource("7_uurvl")]
 position = Vector2(976, -880)
-rotation = 3.1415927
+rotation = -3.1415925

@@ -99,6 +99,7 @@ theme_override_font_sizes/font_size = 42
 text = "2"
 script = ExtResource("7_l0jld")
 level_number = 2
+level_scene = "uid://bhi7tnr5u6lex"
 metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton2" unique_id=302256218]
@@ -114,6 +115,7 @@ theme_override_font_sizes/font_size = 42
 text = "3"
 script = ExtResource("7_l0jld")
 level_number = 3
+level_scene = "uid://c8h1ldewakund"
 metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton3" unique_id=1292945595]
@@ -129,6 +131,7 @@ theme_override_font_sizes/font_size = 42
 text = "4"
 script = ExtResource("7_l0jld")
 level_number = 4
+level_scene = "uid://c4akg830wc3ro"
 metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton4" unique_id=470312780]
