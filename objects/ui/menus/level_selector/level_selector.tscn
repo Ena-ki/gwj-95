@@ -6,8 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://ckbs20jtte0po" path="res://objects/ui/moving in UI.wav" id="3_b1f2w"]
 [ext_resource type="AudioStream" uid="uid://dgy4132g6cd5h" path="res://objects/ui/Select UI.wav" id="4_spd33"]
 [ext_resource type="AudioStream" uid="uid://by6nb18ngfcnk" path="res://objects/ui/Going Back UI.wav" id="5_l0jld"]
+[ext_resource type="Script" uid="uid://byy5ogqrqjrx1" path="res://objects/ui/menus/level_selector/level_select_button.gd" id="7_l0jld"]
+[ext_resource type="PackedScene" uid="uid://uygewd1aj4mm" path="res://objects/ui/menus/level_selector/time_tooltip.tscn" id="7_spd33"]
 
-[node name="LevelSelector" type="Control" unique_id=1740501550 node_paths=PackedStringArray("back_button", "level_select_buttons")]
+[node name="LevelSelector" type="Control" unique_id=1740501550 node_paths=PackedStringArray("back_button", "level_select_buttons", "tooltip")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,10 +18,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kaxra")
 back_button = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton")
-level_select_buttons = [NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton1"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton2"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton3"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton4"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton5")]
-level_scenes = Array[String](["uid://b6t8k67k5jbgd", "uid://bhi7tnr5u6lex", "uid://c8h1ldewakund", "uid://c4akg830wc3ro", ""])
-transition_scene = "uid://cl1ie1240smrh"
+level_select_buttons = [NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton2"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton3"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton4"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton5")]
+tooltip = NodePath("TimeTooltip")
 player_data = ExtResource("2_dl0la")
+transition_scene = "uid://cl1ie1240smrh"
 hover_sound = ExtResource("3_b1f2w")
 selecting_sound = ExtResource("4_spd33")
 back_sound = ExtResource("5_l0jld")
@@ -52,7 +54,7 @@ layout_mode = 2
 [node name="BackButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1049198902]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "BACK"
+text = "back"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton" unique_id=1594855923]
 script = ExtResource("2_bd2h2")
@@ -62,7 +64,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 50
-text = "SELECT LEVEL"
+text = "level select"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -73,66 +75,81 @@ size_flags_stretch_ratio = 2.0
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="LevelButton1" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1075842861]
-custom_minimum_size = Vector2(60, 60)
+[node name="LevelSelectButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1183351676]
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 42
 text = "1"
+script = ExtResource("7_l0jld")
+level_scene = "uid://b6t8k67k5jbgd"
+metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
-[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton1" unique_id=901532826]
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton" unique_id=1112969360]
 script = ExtResource("2_bd2h2")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
-[node name="LevelButton2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1430108066]
-custom_minimum_size = Vector2(60, 60)
+[node name="LevelSelectButton2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=74436750]
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 40
-text = "2
-"
+theme_override_font_sizes/font_size = 42
+text = "2"
+script = ExtResource("7_l0jld")
+level_number = 2
+metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
-[node name="CoolButtonEffect2" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton2" unique_id=1584220857]
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton2" unique_id=302256218]
 script = ExtResource("2_bd2h2")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
-[node name="LevelButton3" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=616911672]
-custom_minimum_size = Vector2(60, 60)
+[node name="LevelSelectButton3" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=721416041]
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 40
-text = "3
-"
+theme_override_font_sizes/font_size = 42
+text = "3"
+script = ExtResource("7_l0jld")
+level_number = 3
+metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
-[node name="CoolButtonEffect3" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton3" unique_id=1046203940]
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton3" unique_id=1292945595]
 script = ExtResource("2_bd2h2")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
-[node name="LevelButton4" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1125849034]
-custom_minimum_size = Vector2(60, 60)
+[node name="LevelSelectButton4" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=612836917]
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 42
 text = "4"
+script = ExtResource("7_l0jld")
+level_number = 4
+metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
-[node name="CoolButtonEffect4" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton4" unique_id=1848863735]
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton4" unique_id=470312780]
 script = ExtResource("2_bd2h2")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
-[node name="LevelButton5" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=57426095]
-visible = false
-custom_minimum_size = Vector2(60, 60)
+[node name="LevelSelectButton5" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=12334627]
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_font_sizes/font_size = 40
-text = "5
-"
+theme_override_font_sizes/font_size = 42
+text = "5"
+script = ExtResource("7_l0jld")
+level_number = 5
+metadata/_custom_type_script = "uid://byy5ogqrqjrx1"
 
-[node name="CoolButtonEffect5" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton5" unique_id=556143362]
+[node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelSelectButton5" unique_id=939376837]
 script = ExtResource("2_bd2h2")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
+
+[node name="TimeTooltip" parent="." unique_id=1007229513 instance=ExtResource("7_spd33")]
+visible = false
+layout_mode = 0

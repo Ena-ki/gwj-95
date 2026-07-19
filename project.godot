@@ -22,7 +22,6 @@ buses/default_bus_layout="uid://dqoyfuw2l8bl0"
 [autoload]
 
 SceneLoader="*uid://jb4bi2je2jso"
-SpawnpointManager="*uid://cgm7mblifv2y7"
 AudioLoader="*uid://cjjep500jei62"
 
 [display]
