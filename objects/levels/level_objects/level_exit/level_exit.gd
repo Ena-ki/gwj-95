@@ -4,11 +4,12 @@ extends Area2D
 # Works when player enters the area
 
 @export_file("*.tscn") var new_scene : String
-@export_file("*.tscn") var transition_file : String
+@export_file("*.tscn") var transition_scene : String
 
 @export var exit_sound : AudioStream
 
 var _activated : bool = false
+#so that it can be activated only once
 
 
 func _ready() -> void:
@@ -16,22 +17,20 @@ func _ready() -> void:
 
 
 func _on_body_entered(body : Node2D) -> void:
-  if body is Player and !_activated:
-    AudioLoader.play_sound(exit_sound)
-    _activated = true
-    var tween := create_tween()
-    tween.tween_property(Engine, "time_scale", 0.0, 0.2)
-    SceneLoader.change_scene(new_scene, transition_file)
+  if _activated || body is not Player:
+    return
 
-    # holy fuck this is ugly
-    # please god let me go to heaven even though i sinned, it's 24 hours until jam ends
-    if owner.player_data.level_progress < owner.level_number + 1:
-      owner.player_data.level_progress = owner.level_number + 1
-    if owner.player_data.level_times.size() < owner.level_number: 
-      owner.player_data.level_times.resize(owner.level_number)
-    if !owner.player_data.level_times[owner.level_number - 1] ||owner.player_data.level_times[owner.level_number - 1] > owner.play_time:
-      print("play time is", owner.play_time)
-      owner.player_data.level_times[owner.level_number - 1] = owner.play_time
+  _activated = true
+  AudioLoader.play_sound(exit_sound)
+
+  var tween := create_tween()
+  tween.tween_property(Engine, "time_scale", 0.0, 0.2)
+
+  # set level prog, set level_time
+  if owner is not Level:
+    push_error("level exit's owner is not a Level, owner is ", owner)
+    return
+  (owner as Level).finish(new_scene, transition_scene)
 
 
 func _exit_tree() -> void:

@@ -33,6 +33,7 @@ position = Vector2(137, 286)
 
 [node name="SmallExit" parent="." unique_id=346656883 instance=ExtResource("10_u2r5d")]
 position = Vector2(310, -204)
+transition_scene = "uid://cl1ie1240smrh"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=878634309]
 
