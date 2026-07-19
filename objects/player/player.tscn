@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bltpvo4sq3cwf" path="res://objects/abilities/ability_input_overlay/wrong code.wav" id="4_m4kly"]
 [ext_resource type="PackedScene" uid="uid://dqcx05u1ctqv6" path="res://objects/abilities/ability_input_overlay/ability_input_overlay.tscn" id="5_gnkmh"]
 [ext_resource type="Texture2D" uid="uid://d2qdhwmtopy2y" path="res://assets/things_atlas.png" id="5_m4kly"]
+[ext_resource type="PackedScene" uid="uid://wtc6dchhiwcq" path="res://objects/abilities/no_spikes/no_spikes.tscn" id="7_xgwla"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4kly"]
 atlas = ExtResource("5_m4kly")
@@ -17,6 +18,7 @@ region = Rect2(0, 32, 32, 32)
 size = Vector2(24, 24)
 
 [node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals", "coyote_timer", "jump_buffer_timer")]
+collision_layer = 3
 safe_margin = 0.15
 script = ExtResource("1_cqmt1")
 speed = 170.0
@@ -48,16 +50,20 @@ one_shot = true
 [node name="Dash" parent="." unique_id=2043558360 node_paths=PackedStringArray("dash_target") instance=ExtResource("3_ssrue")]
 dash_target = NodePath("..")
 
+[node name="NoSpikes" parent="." unique_id=175881811 node_paths=PackedStringArray("target") instance=ExtResource("7_xgwla")]
+target = NodePath("..")
+
 [node name="BigJump" parent="." unique_id=1882994134 node_paths=PackedStringArray("jump_target") instance=ExtResource("4_jnjyq")]
 jump_target = NodePath("..")
 
-[node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("camera", "dash", "big_jump") instance=ExtResource("5_gnkmh")]
+[node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("camera", "dash", "big_jump", "no_spikes") instance=ExtResource("5_gnkmh")]
 visible = false
 camera = NodePath("../Camera2D")
 dash = NodePath("../Dash")
 big_jump = NodePath("../BigJump")
+no_spikes = NodePath("../NoSpikes")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1936014071]
-zoom = Vector2(0.8, 0.8)
+zoom = Vector2(0.7, 0.7)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0

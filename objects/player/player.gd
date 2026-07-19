@@ -27,6 +27,7 @@ signal died
 @export var visuals : Node2D
 @export var coyote_timer : Timer
 @export var jump_buffer_timer : Timer
+@export var spike_layer : TileMapLayer
 
 @export_category("Other References")
 @export var jump_sound : AudioStream

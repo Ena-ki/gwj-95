@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://wtc6dchhiwcq"]
+
+[ext_resource type="Script" uid="uid://bjujo5kenj8k6" path="res://objects/abilities/no_spikes/no_spikes.gd" id="1_8dke3"]
+
+[node name="NoSpikes" type="Node" unique_id=175881811 node_paths=PackedStringArray("timer")]
+script = ExtResource("1_8dke3")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=766437280]
+wait_time = 5.0
+one_shot = true

@@ -4,9 +4,11 @@ extends CanvasLayer
 @export var camera : Camera2D
 @export var dash : Dash
 @export var big_jump : BigJump
+@export var no_spikes : NoSpikes
 @export var dash_code_left : String = "AAA"
 @export var dash_code_right : String = "DDD"
 @export var jump_code : String = "WWW"
+@export var no_spikes_code : String = "SSS"
 @export var line_edit : LineEdit
 
 @export var input_sound : AudioStream
@@ -58,6 +60,11 @@ func _on_line_edit_text_changed(text : String) -> void:
     AudioLoader.play_sound(correct_code_sound, 1.0, true)
     _exit_editing()
 
+  if l_text == no_spikes_code.to_lower():
+    no_spikes.activate()
+    AudioLoader.play_sound(correct_code_sound, 1.0, true)
+    _exit_editing()
+
 
 func _start_editing() -> void:
   line_edit.edit()
@@ -78,4 +85,4 @@ func _exit_editing() -> void:
   visible = false
   camera_tween.kill()
   camera_tween = create_tween()
-  camera_tween.tween_property(camera, "zoom", Vector2(1.0, 1.0), 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
+  camera_tween.tween_property(camera, "zoom", Vector2(0.7, 0.7), 0.2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
