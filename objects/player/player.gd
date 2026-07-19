@@ -62,7 +62,7 @@ func _process(_delta: float) -> void:
 func _handle_jump() -> void:
   if is_on_floor():
     if _was_on_floor == false:
-      AudioLoader.play_sound(landing_sound)
+      AudioLoader.play_sound(landing_sound, -2.0)
       _was_on_floor = true
     if Input.is_action_just_pressed("jump") || (jump_buffer_timer.time_left > 0.0 && Input.is_action_pressed("jump")):
       _jump()

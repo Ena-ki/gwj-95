@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5b6s5ck7nq2e" path="res://objects/levels/level_objects/key/key.gd" id="1_b3l6n"]
 [ext_resource type="Texture2D" uid="uid://d2qdhwmtopy2y" path="res://assets/things_atlas.png" id="1_g26rg"]
+[ext_resource type="AudioStream" uid="uid://bmu1kjbdsyfpe" path="res://objects/player/landing.wav" id="2_v18lx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ha0l"]
 atlas = ExtResource("1_g26rg")
@@ -10,8 +11,10 @@ region = Rect2(0, 64, 32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g26rg"]
 size = Vector2(29, 20)
 
-[node name="Key" type="Area2D" unique_id=1688077425]
+[node name="Key" type="Area2D" unique_id=1693120010]
 script = ExtResource("1_b3l6n")
+collect_sound = ExtResource("2_v18lx")
+metadata/_custom_type_script = "uid://5b6s5ck7nq2e"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=552859280]
 texture = SubResource("AtlasTexture_5ha0l")

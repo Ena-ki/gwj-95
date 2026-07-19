@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://clq5ykmpkasad" path="res://objects/levels/tilesets/test_set_atlas.png" id="1_afcrb"]
 [ext_resource type="PackedScene" uid="uid://cntjjfxoilh6e" path="res://objects/levels/level_objects/obstacles/spikes.tscn" id="2_k4lg4"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_k4lg4"]
+tile_data = PackedInt32Array(196608, 131072, 0, 262144, 0, 1, 327680, 0, 1, 393216, 0, 1, 458752, 0, 1, 524288, 131072, 2, 131073, 65536, 0, 196609, 196608, 2, 524289, 196608, 0, 589825, 65536, 2, 65538, 65536, 0, 131074, 196608, 2, 589826, 196608, 0, 655362, 65536, 2, 3, 65536, 1, 65539, 196608, 2, 655363, 196608, 0, 720899, 65536, 1, 4, 131072, 3, 720900, 131072, 3, 5, 131072, 3, 720901, 131072, 3, 6, 131072, 3, 720902, 131072, 3, 7, 131072, 3, 720903, 131072, 3, 8, 196608, 1, 65544, 65536, 2, 655368, 65536, 0, 720904, 196608, 1, 65545, 196608, 0, 131081, 65536, 2, 589833, 65536, 0, 655369, 196608, 2, 131082, 196608, 0, 196618, 65536, 2, 524298, 65536, 0, 589834, 196608, 2, 196619, 131072, 0, 262155, 0, 1, 327691, 0, 1, 393227, 0, 1, 458763, 0, 1, 524299, 131072, 2)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k4lg4"]
 texture = ExtResource("1_afcrb")
 texture_region_size = Vector2i(32, 32)
@@ -395,3 +398,4 @@ terrain_set_0/terrain_0/name = "test"
 terrain_set_0/terrain_0/color = Color(0.71290076, 0, 0.30804166, 1)
 sources/0 = SubResource("TileSetAtlasSource_k4lg4")
 sources/1 = SubResource("TileSetScenesCollectionSource_3u1nr")
+pattern_0 = SubResource("TileMapPattern_k4lg4")

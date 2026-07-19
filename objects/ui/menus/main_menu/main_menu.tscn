@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b65bbbeexcs2m" path="res://objects/ui/menus/settings_menu/settings_menu.tscn" id="4_4ae8r"]
 [ext_resource type="AudioStream" uid="uid://dgy4132g6cd5h" path="res://objects/ui/Select UI.wav" id="4_mr5oh"]
 [ext_resource type="Script" uid="uid://le7kdmft6m0t" path="res://objects/ui/components/shader_container.gd" id="5_m41jd"]
+[ext_resource type="Resource" uid="uid://df6xvlbuhiady" path="res://data/player_data.tres" id="5_mr5oh"]
 [ext_resource type="PackedScene" uid="uid://chrsyqa2v12ye" path="res://objects/ui/menus/level_selector/level_selector.tscn" id="6_4ae8r"]
 [ext_resource type="Material" uid="uid://btf0ymcpmbyqn" path="res://assets/shaders/very_cool_and_awesome_shader.tres" id="6_rchgy"]
 
@@ -15,7 +16,7 @@ content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(1, 0.6310167, 0.98260623, 0.6)
+bg_color = Color(0.33, 0.33, 0.33, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -60,7 +61,9 @@ _data = {
 &"loop": SubResource("Animation_m41jd")
 }
 
-[node name="MainMenu" type="Control" unique_id=67057453 node_paths=PackedStringArray("scene_selector", "play_button", "settings_button", "exit_button", "settings_menu")]
+[sub_resource type="Gradient" id="Gradient_uxeig"]
+
+[node name="MainMenu" type="Control" unique_id=67057453 node_paths=PackedStringArray("scene_selector", "play_button", "settings_button", "exit_button", "settings_menu", "hidden_nodes")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,9 +76,11 @@ play_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/PlayButton
 settings_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/SettingsButton")
 exit_button = NodePath("MarginContainer/HBoxContainer/ButtonContainer/ExitButton")
 settings_menu = NodePath("SettingsMenu")
+hidden_nodes = [NodePath("CPUParticles2D2"), NodePath("CPUParticles2D3"), NodePath("CPUParticles2D4"), NodePath("CPUParticles2D5")]
 main_menu_music = ExtResource("2_uxeig")
 hover_sound = ExtResource("3_uxeig")
 selecting_sound = ExtResource("4_mr5oh")
+player_data = ExtResource("5_mr5oh")
 
 [node name="Panel" type="Panel" parent="." unique_id=650237544]
 layout_mode = 1
@@ -212,3 +217,67 @@ gravity = Vector2(0, 0)
 initial_velocity_max = 5.0
 scale_amount_min = 16.79
 scale_amount_max = 29.43
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="." unique_id=332607698]
+visible = false
+z_index = 1
+position = Vector2(553, 235)
+amount = 64
+lifetime = 1.4000000000000001
+explosiveness = 1.0
+draw_order = 1
+direction = Vector2(0, -1)
+spread = 63.2
+initial_velocity_min = 147.37
+initial_velocity_max = 353.46
+scale_amount_min = 2.0
+scale_amount_max = 8.0
+color_initial_ramp = SubResource("Gradient_uxeig")
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="." unique_id=754253825]
+visible = false
+z_index = 1
+position = Vector2(257, 275)
+amount = 64
+lifetime = 1.4000000000000001
+explosiveness = 1.0
+draw_order = 1
+direction = Vector2(0, -1)
+spread = 63.2
+initial_velocity_min = 147.37
+initial_velocity_max = 353.46
+scale_amount_min = 2.0
+scale_amount_max = 8.0
+color_initial_ramp = SubResource("Gradient_uxeig")
+
+[node name="CPUParticles2D4" type="CPUParticles2D" parent="." unique_id=1148095581]
+visible = false
+z_index = 1
+position = Vector2(72, 36)
+amount = 64
+lifetime = 1.4000000000000001
+explosiveness = 1.0
+draw_order = 1
+direction = Vector2(0, -1)
+spread = 63.2
+initial_velocity_min = 147.37
+initial_velocity_max = 353.46
+scale_amount_min = 2.0
+scale_amount_max = 8.0
+color_initial_ramp = SubResource("Gradient_uxeig")
+
+[node name="CPUParticles2D5" type="CPUParticles2D" parent="." unique_id=1317849440]
+visible = false
+z_index = 1
+position = Vector2(566, 61)
+amount = 64
+lifetime = 1.4000000000000001
+explosiveness = 1.0
+draw_order = 1
+direction = Vector2(0, -1)
+spread = 63.2
+initial_velocity_min = 147.37
+initial_velocity_max = 353.46
+scale_amount_min = 2.0
+scale_amount_max = 8.0
+color_initial_ramp = SubResource("Gradient_uxeig")

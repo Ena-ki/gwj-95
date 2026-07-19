@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_y437r")
-palette = Array[Color]([Color(0, 0, 0, 1), Color(0.10838572, 0.024836762, 0.14350432, 1), Color(0, 0, 0, 1), Color(0.5921569, 0.28627452, 0.72156864, 1)])
+palette = Array[Color]([Color(0, 0, 0, 1), Color(0.27742878, 0.00012451425, 0.3157132, 1), Color(0.5393862, 0.12039494, 0.58896214, 1), Color(0.7391598, 0.5767173, 0.93672675, 1)])
 palette_name = " PURPUR"
 metadata/_custom_type_script = "uid://dpf30ng785gfw"

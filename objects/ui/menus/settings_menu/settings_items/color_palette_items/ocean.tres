@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_uk0p8")
-palette = Array[Color]([Color(0, 0, 0, 1), Color(0.0001045791, 0.09350786, 0.15540975, 1), Color(0, 0, 0, 1), Color(0.023529412, 0.68235296, 0.9882353, 1)])
+palette = Array[Color]([Color(0, 0, 0, 1), Color(2.4065375e-08, 0.16080561, 0.25417918, 1), Color(0.2650473, 0.40333298, 0.6186273, 1), Color(0.38294104, 0.7582539, 0.999353, 1)])
 palette_name = " OCEAN"
 metadata/_custom_type_script = "uid://dpf30ng785gfw"

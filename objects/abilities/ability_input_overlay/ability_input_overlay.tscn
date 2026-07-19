@@ -8,6 +8,7 @@
 [node name="AbilityInputOverlay" type="CanvasLayer" unique_id=709631529 node_paths=PackedStringArray("line_edit")]
 layer = 5
 script = ExtResource("1_vxgjj")
+no_spikes_code = "ASD"
 line_edit = NodePath("LineEdit")
 input_sound = ExtResource("2_1cq0t")
 correct_code_sound = ExtResource("3_1cq0t")

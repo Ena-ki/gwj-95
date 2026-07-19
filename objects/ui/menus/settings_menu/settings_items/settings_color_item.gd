@@ -10,7 +10,11 @@ func _ready() -> void:
   item_selected.connect(_on_item_selected)
   for i in range(palettes.size()):
     add_item(palettes[i].palette_name, i)
-  select(player_data.current_palette_id)
+  if player_data.current_palette == null:
+    shader.set_shader_parameter("color_map", palettes[0].palette)
+    player_data.current_palette_id = 0
+    player_data.current_palette = palettes[0]
+
 
 
 func _on_item_selected(i : int) -> void:

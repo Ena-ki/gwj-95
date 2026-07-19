@@ -85,6 +85,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
 [node name="SettingsColorItem" type="OptionButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=499706028]
 layout_mode = 2
+allow_reselect = true
 script = ExtResource("2_yvqt7")
 shader = ExtResource("4_3tf4i")
 palettes = Array[ExtResource("5_mmxrv")]([ExtResource("9_xrgby"), ExtResource("10_x1lxj"), ExtResource("11_xjkj7"), ExtResource("7_lxv02"), ExtResource("11_6oohq")])

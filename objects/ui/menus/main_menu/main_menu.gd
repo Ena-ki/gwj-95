@@ -7,10 +7,12 @@ extends Control
 @export var settings_button : Button
 @export var exit_button : Button
 @export var settings_menu : Control
+@export var hidden_nodes : Array[Node] = []
 
 @export var main_menu_music : AudioStream
 @export var hover_sound : AudioStream
 @export var selecting_sound : AudioStream
+@export var player_data : PlayerData
 
 
 func _ready() -> void:
@@ -22,6 +24,10 @@ func _ready() -> void:
   settings_button.pressed.connect(_on_settings_button_pressed)
   exit_button.mouse_entered.connect(func() : AudioLoader.play_sound(hover_sound))
   exit_button.pressed.connect(_on_exit_button_pressed)
+  if player_data.level_progress >= 4:
+    for i in range(hidden_nodes.size()):
+      hidden_nodes[i].visible = true
+
 
 
 func _on_play_button_pressed() -> void:

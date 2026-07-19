@@ -38,4 +38,4 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-  play_time += delta
+  play_time += delta / Engine.time_scale

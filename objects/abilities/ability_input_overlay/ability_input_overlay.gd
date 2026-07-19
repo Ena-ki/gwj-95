@@ -38,7 +38,7 @@ func _process(_delta: float) -> void:
 
 func _on_line_edit_text_changed(text : String) -> void:
   if text.length() > 3:
-    AudioLoader.play_sound(wrong_code_sound, 1.0, true)
+    AudioLoader.play_sound(wrong_code_sound, 0.0, true)
     _exit_editing()
     return
   AudioLoader.play_sound(input_sound, -2.0, true)
@@ -47,22 +47,22 @@ func _on_line_edit_text_changed(text : String) -> void:
 
   if l_text == dash_code_left.to_lower():
     dash.dash_left()
-    AudioLoader.play_sound(correct_code_sound, 1.0, true)
+    AudioLoader.play_sound(correct_code_sound, -5.0, true)
     _exit_editing()
 
   if l_text == dash_code_right.to_lower():
     dash.dash_right()
-    AudioLoader.play_sound(correct_code_sound, 1.0, true)
+    AudioLoader.play_sound(correct_code_sound, -5.0, true)
     _exit_editing()
 
   if l_text == jump_code.to_lower():
     big_jump.big_jump()
-    AudioLoader.play_sound(correct_code_sound, 1.0, true)
+    AudioLoader.play_sound(correct_code_sound, -5.0, true)
     _exit_editing()
 
   if l_text == no_spikes_code.to_lower():
     no_spikes.activate()
-    AudioLoader.play_sound(correct_code_sound, 1.0, true)
+    AudioLoader.play_sound(correct_code_sound, -5.0, true)
     _exit_editing()
 
 

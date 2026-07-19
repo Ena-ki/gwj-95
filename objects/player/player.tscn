@@ -15,7 +15,7 @@ atlas = ExtResource("5_m4kly")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljj53"]
-size = Vector2(24, 24)
+size = Vector2(23.5, 23.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=51254875 node_paths=PackedStringArray("visuals", "coyote_timer", "jump_buffer_timer")]
 collision_layer = 3
@@ -55,6 +55,7 @@ target = NodePath("..")
 
 [node name="BigJump" parent="." unique_id=1882994134 node_paths=PackedStringArray("jump_target") instance=ExtResource("4_jnjyq")]
 jump_target = NodePath("..")
+jump_multiplier = 1.8
 
 [node name="AbilityInputOverlay" parent="." unique_id=709631529 node_paths=PackedStringArray("camera", "dash", "big_jump", "no_spikes") instance=ExtResource("5_gnkmh")]
 visible = false
