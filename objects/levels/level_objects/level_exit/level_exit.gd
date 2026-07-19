@@ -4,14 +4,12 @@ extends Area2D
 # Works when player enters the area
 
 @export_file("*.tscn") var new_scene : String
-@export_file("*.tscn") var transition_file : String
-
-@export var player_data : PlayerData
-@export var next_level_number : int = 0
+@export_file("*.tscn") var transition_scene : String
 
 @export var exit_sound : AudioStream
 
 var _activated : bool = false
+#so that it can be activated only once
 
 
 func _ready() -> void:
@@ -19,14 +17,20 @@ func _ready() -> void:
 
 
 func _on_body_entered(body : Node2D) -> void:
-  if body is Player and !_activated:
-    AudioLoader.play_sound(exit_sound)
-    _activated = true
-    var tween := create_tween()
-    tween.tween_property(Engine, "time_scale", 0.0, 0.2)
-    SceneLoader.change_scene(new_scene, transition_file)
-    if player_data.level_progress < next_level_number:
-      player_data.level_progress = next_level_number
+  if _activated || body is not Player:
+    return
+
+  _activated = true
+  AudioLoader.play_sound(exit_sound)
+
+  var tween := create_tween()
+  tween.tween_property(Engine, "time_scale", 0.0, 0.2)
+
+  # set level prog, set level_time
+  if owner is not Level:
+    push_error("level exit's owner is not a Level, owner is ", owner)
+    return
+  (owner as Level).finish(new_scene, transition_scene)
 
 
 func _exit_tree() -> void:

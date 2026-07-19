@@ -4,3 +4,4 @@
 
 [node name="BigJump" type="Node2D" unique_id=1882994134]
 script = ExtResource("1_m66p7")
+jump_multiplier = 1.7
