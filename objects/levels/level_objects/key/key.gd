@@ -17,4 +17,3 @@ func _on_body_entered(body : Node2D) -> void:
   for i in range(blocks_to_erase.size()):
     map.set_cell(blocks_to_erase[i], -1)
   queue_free()
-

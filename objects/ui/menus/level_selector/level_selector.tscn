@@ -17,7 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_kaxra")
 back_button = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton")
 level_select_buttons = [NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton1"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton2"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton3"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton4"), NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/LevelButton5")]
-level_scenes = Array[String](["uid://b6t8k67k5jbgd", "uid://hhvesa456fp1", "", "", ""])
+level_scenes = Array[String](["uid://b6t8k67k5jbgd", "uid://bhi7tnr5u6lex", "uid://c8h1ldewakund", "uid://c4akg830wc3ro", ""])
 transition_scene = "uid://cl1ie1240smrh"
 player_data = ExtResource("2_dl0la")
 hover_sound = ExtResource("3_b1f2w")
@@ -52,7 +52,7 @@ layout_mode = 2
 [node name="BackButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1049198902]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "back"
+text = "BACK"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/BackButton" unique_id=1594855923]
 script = ExtResource("2_bd2h2")
@@ -62,7 +62,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 50
-text = "level select"
+text = "SELECT LEVEL"
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -124,6 +124,7 @@ script = ExtResource("2_bd2h2")
 metadata/_custom_type_script = "uid://cl130e5ueeoei"
 
 [node name="LevelButton5" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=57426095]
+visible = false
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
