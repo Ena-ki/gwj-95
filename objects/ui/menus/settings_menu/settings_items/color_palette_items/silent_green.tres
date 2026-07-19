@@ -5,5 +5,5 @@
 [resource]
 script = ExtResource("1_ehs0y")
 palette = Array[Color]([Color(0, 0, 0, 1), Color(4.512258e-08, 0.13936868, 3.6098065e-08, 1), Color(0, 0, 0, 1), Color(0, 1, 0, 1)])
-palette_name = "Terminal Green"
+palette_name = " TERMINAL GREEN"
 metadata/_custom_type_script = "uid://dpf30ng785gfw"

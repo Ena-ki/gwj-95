@@ -112,7 +112,7 @@ alignment = 1
 [node name="PlayButton" type="Button" parent="MarginContainer/HBoxContainer/ButtonContainer" unique_id=982456832]
 layout_mode = 2
 offset_transform_enabled = true
-text = "Play"
+text = "PLAY"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/HBoxContainer/ButtonContainer/PlayButton" unique_id=1037332586]
 script = ExtResource("2_m41jd")
@@ -121,7 +121,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 [node name="SettingsButton" type="Button" parent="MarginContainer/HBoxContainer/ButtonContainer" unique_id=263670111]
 layout_mode = 2
 offset_transform_enabled = true
-text = "Settings"
+text = "SETTINGS"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/HBoxContainer/ButtonContainer/SettingsButton" unique_id=347845216]
 script = ExtResource("2_m41jd")
@@ -130,7 +130,7 @@ metadata/_custom_type_script = "uid://cl130e5ueeoei"
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/ButtonContainer" unique_id=247184181]
 layout_mode = 2
 offset_transform_enabled = true
-text = "Exit"
+text = "EXIT"
 
 [node name="CoolButtonEffect" type="Node" parent="MarginContainer/HBoxContainer/ButtonContainer/ExitButton" unique_id=545462907]
 script = ExtResource("2_m41jd")
@@ -149,7 +149,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 54
-text = "EXIT code_"
+text = "EXIT CODE_"
 horizontal_alignment = 1
 visible_characters = 10
 visible_characters_behavior = 1
@@ -182,7 +182,7 @@ theme_override_constants/margin_bottom = 10
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer2" unique_id=1176182497]
 layout_mode = 2
 mouse_filter = 2
-text = "made for godot wild jam 95"
+text = "MADE FOR GODOT WILD JAM # 95"
 horizontal_alignment = 2
 vertical_alignment = 2
 
